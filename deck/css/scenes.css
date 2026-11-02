@@ -112,7 +112,7 @@
 .chain-node.is-done { border-color: color-mix(in srgb, var(--accent) 45%, var(--line)); }
 
 /* ---------- 2 · por que ---------- */
-.shift { display: grid; grid-template-columns: 1fr 96px 1fr; align-items: stretch; margin-top: 64px; }
+.shift { display: grid; grid-template-columns: 1fr 96px 1fr; align-items: stretch; margin-top: 44px; }
 .shift-card { display: flex; flex-direction: column; gap: 24px; }
 .shift-card h3 { line-height: 1.15; }
 .shift-card.is-now { border-color: var(--accent); background: var(--surface-2); }
@@ -126,7 +126,12 @@
 .shift-steps li::before { content: "✓ "; color: var(--accent); }
 .shift-ctx { margin-top: auto !important; font-size: var(--fs-body); color: var(--fg-muted); line-height: 1.3; }
 .shift-ctx b { color: var(--fg); font-weight: 600; }
-.shift-q { margin-top: 56px !important; font-size: var(--fs-h3); color: var(--accent); }
+.shift-foot { display: flex; align-items: center; justify-content: space-between; gap: var(--gap); margin-top: auto; }
+.shift-q { font-size: var(--fs-h3); color: var(--accent); }
+.qr { display: flex; align-items: center; gap: 24px; padding: 14px 28px 14px 14px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); color: var(--fg); text-decoration: none; }
+.qr img { width: 128px; height: 128px; border-radius: 8px; }
+.qr-text { display: flex; flex-direction: column; gap: 8px; font-size: var(--fs-small); line-height: 1.3; }
+.qr-text .mono { font-size: var(--fs-caption); }
 
 /* ---------- 3–7 · linha do tempo (mesmo cabeçalho em todos os anos) ---------- */
 .tl-head { display: flex; align-items: flex-end; gap: 72px; }
@@ -343,7 +348,8 @@
 .is-flow .chain-node:has(+ .chain-node)::after { content: "↓"; right: auto; left: 50%; top: auto; bottom: -26px; transform: translateX(-50%); }
 .is-flow .shift { grid-template-columns: 1fr; gap: 12px; margin-top: 24px; }
 .is-flow .shift-arrow { transform: rotate(90deg); }
-.is-flow .shift-q { margin-top: 24px !important; }
+.is-flow .shift-foot { flex-direction: column; align-items: flex-start; margin-top: 24px; }
+.is-flow .qr img { width: 120px; height: 120px; }
 .is-flow .tl-head { flex-direction: column; align-items: stretch; gap: 16px; }
 .is-flow .tl-year { font-size: clamp(56px, 18vw, 96px); }
 .is-flow .tl-ruler li { font-size: 12px; gap: 10px; }

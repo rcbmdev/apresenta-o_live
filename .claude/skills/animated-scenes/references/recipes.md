@@ -46,7 +46,7 @@ Para ramificações, chame `flow` duas vezes com listas diferentes na mesma time
 
 ## drawPath(tl, paths, { duration=1, stagger=0.15, ease, at })
 Desenha `<path>`, `<line>`, `<polyline>` SVG pelo traço (sem DrawSVGPlugin).
-O elemento precisa de `stroke` e `fill: none`.
+O elemento precisa de `stroke` e `fill: none`. Fica invisível até o traço começar (pontas de seta `marker` não aparecem antes da linha).
 
 ## alongPath(tl, el, path, { duration=2, ease='none', at })
 Move um elemento sobre um `<path>`. `el` e `path` precisam estar no mesmo sistema de coordenadas

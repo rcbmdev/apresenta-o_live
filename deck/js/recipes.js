@@ -178,12 +178,12 @@
       return tl;
     },
 
-    /** Desenha um <path>/<line> SVG (stroke) sem DrawSVGPlugin. */
+    /** Desenha um <path>/<line> SVG (stroke) sem DrawSVGPlugin. A linha (e suas pontas de seta) só aparece junto com o traço. */
     drawPath: function (tl, path, opts) {
       opts = opts || {};
       els(path).forEach(function (p, i) {
         var len = p.getTotalLength ? p.getTotalLength() : 1000;
-        tl.fromTo(p, { strokeDasharray: len, strokeDashoffset: len }, { strokeDashoffset: 0, duration: opts.duration || 1, ease: opts.ease || 'power2.inOut' }, i === 0 ? opts.at : '<' + (opts.stagger || 0.15));
+        tl.fromTo(p, { strokeDasharray: len, strokeDashoffset: len, autoAlpha: 0 }, { strokeDashoffset: 0, autoAlpha: 1, duration: opts.duration || 1, ease: opts.ease || 'power2.inOut' }, i === 0 ? opts.at : '<' + (opts.stagger || 0.15));
       });
       return tl;
     },
