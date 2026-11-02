@@ -1,0 +1,8 @@
+node_modules/
+qa/
+dist/png/
+.DS_Store
+dist/
+# fora do repositório público: foto de referência com o rosto de outra pessoa e o zip das skills
+/img/
+/Claude outputs/

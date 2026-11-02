@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>IA generativa para desenvolvedores · do ChatGPT ao Claude Code</title>
+  <meta name="description" content="Como a IA generativa deixou de ser um chat que sugere código e virou um agente que trabalha no seu projeto.">
+  <meta name="theme-color" content="#05070d">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/deck.css">
+  <link rel="stylesheet" href="css/scenes.css">
+</head>
+<body>
+<main class="deck" aria-live="polite">
+
+  <!-- 1 · CAPA -->
+  <section class="slide s-capa" data-id="capa" data-title="IA generativa para desenvolvedores">
+    <div class="glow" aria-hidden="true"></div>
+    <p class="kicker">EVENTO 2026 · PALESTRA</p>
+    <h1 class="hero-title">IA generativa para desenvolvedores</h1>
+    <p class="lead">Do chat que sugere código ao agente que trabalha no seu repositório.</p>
+    <p class="byline"><b>Rodrigo</b></p>
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track"><span class="mq-set"><span class="mq-item"><img class="logo" src="assets/img/logos/python.svg" alt="">Python</span><span class="mq-item"><img class="logo" src="assets/img/logos/openai.svg" alt="">ChatGPT</span><span class="mq-item"><img class="logo" src="assets/img/logos/langchain.svg" alt="">LangChain</span><span class="mq-item"><img class="logo" src="assets/img/logos/langgraph.svg" alt="">LangGraph</span><span class="mq-item"><img class="logo" src="assets/img/logos/langflow.svg" alt="">Langflow</span><span class="mq-item"><img class="logo" src="assets/img/logos/n8n.svg" alt="">n8n</span><span class="mq-item"><img class="logo" src="assets/img/logos/modelcontextprotocol.svg" alt="">MCP</span><span class="mq-item"><img class="logo" src="assets/img/logos/claude.svg" alt="">Claude Code</span><span class="mq-item"><img class="logo" src="assets/img/logos/openai.svg" alt="">Codex</span><span class="mq-item"><img class="logo" src="assets/img/logos/cursor.svg" alt="">Cursor</span><span class="mq-item"><img class="logo" src="assets/img/logos/githubcopilot.svg" alt="">Copilot</span><span class="mq-item"><img class="logo" src="assets/img/logos/googlegemini.svg" alt="">Gemini</span></span><span class="mq-set"><span class="mq-item"><img class="logo" src="assets/img/logos/python.svg" alt="">Python</span><span class="mq-item"><img class="logo" src="assets/img/logos/openai.svg" alt="">ChatGPT</span><span class="mq-item"><img class="logo" src="assets/img/logos/langchain.svg" alt="">LangChain</span><span class="mq-item"><img class="logo" src="assets/img/logos/langgraph.svg" alt="">LangGraph</span><span class="mq-item"><img class="logo" src="assets/img/logos/langflow.svg" alt="">Langflow</span><span class="mq-item"><img class="logo" src="assets/img/logos/n8n.svg" alt="">n8n</span><span class="mq-item"><img class="logo" src="assets/img/logos/modelcontextprotocol.svg" alt="">MCP</span><span class="mq-item"><img class="logo" src="assets/img/logos/claude.svg" alt="">Claude Code</span><span class="mq-item"><img class="logo" src="assets/img/logos/openai.svg" alt="">Codex</span><span class="mq-item"><img class="logo" src="assets/img/logos/cursor.svg" alt="">Cursor</span><span class="mq-item"><img class="logo" src="assets/img/logos/githubcopilot.svg" alt="">Copilot</span><span class="mq-item"><img class="logo" src="assets/img/logos/googlegemini.svg" alt="">Gemini</span></span></div>
+    </div>
+    <aside class="notes">Apresente o tema em uma frase: "hoje vamos ver como a IA saiu do chat e foi parar dentro do terminal, e como usar isso bem".</aside>
+  </section>
+
+  <!-- 2 · POR QUE -->
+  <section class="slide s-por-que" data-id="por-que" data-title="O desenvolvedor passou de autor a revisor">
+    <p class="kicker">O QUE MUDOU</p>
+    <h2>O desenvolvedor passou de autor a revisor</h2>
+    <div class="shift">
+      <article class="card shift-card">
+        <p class="shift-label"><i class="ic" data-icon="keyboard"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M10 8h.01" /> <path d="M12 12h.01" /> <path d="M14 8h.01" /> <path d="M16 12h.01" /> <path d="M18 8h.01" /> <path d="M6 8h.01" /> <path d="M7 16h10" /> <path d="M8 12h.01" /> <rect width="20" height="16" x="2" y="4" rx="2" /> </svg></i>ANTES</p>
+        <h3>Você escreve, a IA completa a linha</h3>
+        <pre class="code-snip" aria-label="Exemplo de autocompletar"><span>def total(itens):</span>
+<span>    return </span><span class="ghost">sum(i.preco for i in itens)</span></pre>
+        <p class="shift-ctx"><b>Contexto:</b> o arquivo aberto.</p>
+      </article>
+      <div class="shift-arrow" aria-hidden="true">→</div>
+      <article class="card shift-card is-now">
+        <p class="shift-label"><i class="ic" data-icon="bot"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M12 8V4H8" /> <rect width="16" height="12" x="4" y="8" rx="2" /> <path d="M2 14h2" /> <path d="M20 14h2" /> <path d="M15 13v2" /> <path d="M9 13v2" /> </svg></i>AGORA</p>
+        <h3>A IA executa, você define e revisa</h3>
+        <ul class="shift-steps">
+          <li>lê o projeto</li><li>executa comandos</li><li>testa</li><li>entrega um diff</li>
+        </ul>
+        <p class="shift-ctx"><b>Contexto:</b> o repositório, as ferramentas e as regras que você define.</p>
+      </article>
+    </div>
+    <p class="shift-q">Como chegamos aqui em quatro anos?</p>
+    <aside class="notes">Pergunte à plateia: "quem aqui já deixou um agente rodar um comando no seu terminal?". Use a resposta para calibrar o resto.</aside>
+  </section>
+
+  <!-- 3 · 2022 -->
+  <section class="slide s-ano" data-id="t-2022" data-group="linha-do-tempo" data-title="2022: o chat chega ao cotidiano">
+    <header class="tl-head">
+      <span class="tl-year" data-year="2022">2022</span>
+      <div class="tl-ruler" style="--pos: 0" aria-hidden="true">
+        <div class="tl-track"><div class="tl-fill"></div></div>
+        <ol><li class="is-current">2022</li><li>2023</li><li>2024</li><li>2025</li><li>2026</li></ol>
+      </div>
+    </header>
+    <h2>O chat chega ao cotidiano</h2>
+    <div class="tl-cols">
+      <article class="card tl-card">
+        <p class="tl-tag"><img class="logo" src="assets/img/logos/openai.svg" alt=""><b>ChatGPT</b><span>30 de novembro</span></p>
+        <p class="tl-text">A interface de conversa chega ao cotidiano.</p>
+        <div class="term-window">
+          <div class="term-bar"><i></i><i></i><i></i><span>conversa</span></div>
+          <div class="term-body">
+            <div class="term-line" data-t="prompt">como leio um CSV em Python?</div>
+            <div class="term-line" data-t="out">Use o pandas:</div>
+            <div class="term-line" data-t="ok">pd.read_csv("dados.csv")</div>
+          </div>
+        </div>
+      </article>
+      <article class="card tl-card">
+        <p class="tl-tag"><img class="logo" src="assets/img/logos/langchain.svg" alt=""><b>LangChain</b><span>outubro · 1º pacote Python</span></p>
+        <p class="tl-text">O desenvolvedor conecta o modelo à aplicação.</p>
+        <div class="chain">
+          <div class="chain-node"><i class="ic" data-icon="code"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="m16 18 6-6-6-6" /> <path d="m8 6-6 6 6 6" /> </svg></i><b>Aplicação</b><span>seu código e suas regras</span></div>
+          <div class="chain-node"><i class="ic" data-icon="brain"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M12 18V5" /> <path d="M15 13a4.17 4.17 0 01-3-4 4.17 4.17 0 01-3 4" /> <path d="M17.707 6.294A3 3 0 1012 5a3 3 0 10-5.707 1.294" /> <path d="M17.996 5.125a4 4 0 012.526 5.77" /> <path d="M18 18a4 4 0 002-7.465" /> <path d="M19.967 17.482a4 4 0 11-7.967.517 4 4 0 11-7.967-.517" /> <path d="M6 18a4 4 0 01-2-7.465" /> <path d="M6.004 5.125a4 4 0 00-2.526 5.77" /> </svg></i><b>Modelo</b><span>uma chamada por API</span></div>
+          <div class="chain-node"><i class="ic" data-icon="database"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <ellipse cx="12" cy="5" rx="9" ry="3" /> <path d="M3 5V19A9 3 0 0 0 21 19V5" /> <path d="M3 12A9 3 0 0 0 21 12" /> </svg></i><b>Dados</b><span>documentos e ferramentas</span></div>
+        </div>
+      </article>
+    </div>
+    <p class="footnote">Marcos de acesso e composição, não o início da pesquisa em IA. Fontes: anúncio da OpenAI (30/11/2022); histórico de versões do LangChain.</p>
+    <aside class="notes">Ritmo rápido, cerca de 2 minutos por ano. A ideia que atravessa os cinco slides: a cada ano, o modelo ganha mais ação e o desenvolvedor ganha mais responsabilidade de definir limites.</aside>
+  </section>
+
+  <!-- 4 · 2023 -->
+  <section class="slide s-ano" data-id="t-2023" data-group="linha-do-tempo" data-title="2023: frameworks, fluxos e os primeiros agentes">
+    <header class="tl-head">
+      <span class="tl-year" data-year="2023" data-from="2022">2023</span>
+      <div class="tl-ruler" style="--pos: 1" aria-hidden="true">
+        <div class="tl-track"><div class="tl-fill"></div></div>
+        <ol><li class="is-past">2022</li><li class="is-current">2023</li><li>2024</li><li>2025</li><li>2026</li></ol>
+      </div>
+    </header>
+    <h2>Frameworks, fluxos e os primeiros agentes</h2>
+    <div class="tl-cols">
+      <article class="card tl-card">
+        <p class="tl-tag"><b>Construir um fluxo</b></p>
+        <p class="tl-logos"><span><img class="logo" src="assets/img/logos/langchain.svg" alt="">LangChain</span><span><img class="logo" src="assets/img/logos/langflow.svg" alt="">Langflow</span><span><img class="logo" src="assets/img/logos/n8n.svg" alt="">n8n</span></p>
+        <p class="tl-text">Você desenha o caminho; o modelo é uma etapa.</p>
+        <div class="chain">
+          <div class="chain-node"><i class="ic" data-icon="keyboard"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M10 8h.01" /> <path d="M12 12h.01" /> <path d="M14 8h.01" /> <path d="M16 12h.01" /> <path d="M18 8h.01" /> <path d="M6 8h.01" /> <path d="M7 16h10" /> <path d="M8 12h.01" /> <rect width="20" height="16" x="2" y="4" rx="2" /> </svg></i><b>Entrada</b></div>
+          <div class="chain-node"><i class="ic" data-icon="brain"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M12 18V5" /> <path d="M15 13a4.17 4.17 0 01-3-4 4.17 4.17 0 01-3 4" /> <path d="M17.707 6.294A3 3 0 1012 5a3 3 0 10-5.707 1.294" /> <path d="M17.996 5.125a4 4 0 012.526 5.77" /> <path d="M18 18a4 4 0 002-7.465" /> <path d="M19.967 17.482a4 4 0 11-7.967.517 4 4 0 11-7.967-.517" /> <path d="M6 18a4 4 0 01-2-7.465" /> <path d="M6.004 5.125a4 4 0 00-2.526 5.77" /> </svg></i><b>Modelo</b></div>
+          <div class="chain-node"><i class="ic" data-icon="file-text"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z" /> <path d="M14 2v5a1 1 0 0 0 1 1h5" /> <path d="M10 9H8" /> <path d="M16 13H8" /> <path d="M16 17H8" /> </svg></i><b>Saída</b></div>
+        </div>
+      </article>
+      <article class="card tl-card">
+        <p class="tl-tag"><b>Experimentar agentes</b></p>
+        <p class="tl-logos"><span><i class="ic" data-icon="bot"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M12 8V4H8" /> <rect width="16" height="12" x="4" y="8" rx="2" /> <path d="M2 14h2" /> <path d="M20 14h2" /> <path d="M15 13v2" /> <path d="M9 13v2" /> </svg></i>AutoGPT</span></p>
+        <p class="tl-text">O agente escolhe a próxima ação até cumprir o objetivo.</p>
+        <div class="loop-chain">
+          <div class="chain is-compact">
+            <div class="chain-node"><i class="ic" data-icon="target"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <circle cx="12" cy="12" r="10" /> <circle cx="12" cy="12" r="6" /> <circle cx="12" cy="12" r="2" /> </svg></i><b>Objetivo</b></div>
+            <div class="chain-node"><i class="ic" data-icon="list-checks"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M13 5h8" /> <path d="M13 12h8" /> <path d="M13 19h8" /> <path d="m3 17 2 2 4-4" /> <path d="m3 7 2 2 4-4" /> </svg></i><b>Escolher ação</b></div>
+            <div class="chain-node"><i class="ic" data-icon="play"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M5 5a2 2 0 0 1 3.008-1.728l11.997 6.998a2 2 0 0 1 .003 3.458l-12 7A2 2 0 0 1 5 19z" /> </svg></i><b>Executar</b></div>
+            <div class="chain-node"><i class="ic" data-icon="eye"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0" /> <circle cx="12" cy="12" r="3" /> </svg></i><b>Observar</b></div>
+          </div>
+          <div class="loop-back" aria-hidden="true"></div>
+          <span class="loop-label">repete</span>
+        </div>
+      </article>
+    </div>
+    <p class="tl-take">O modelo participa da escolha das ações e recebe os resultados das ferramentas.</p>
+    <p class="footnote">Fontes: repositórios oficiais do LangChain, Langflow e AutoGPT (2023).</p>
+    <aside class="notes">O salto de 2023: o modelo deixa de só responder e passa a escolher a próxima ação. Os agentes da época eram instáveis, mas a ideia ficou.</aside>
+  </section>
+
+  <!-- 5 · 2024 -->
+  <section class="slide s-ano" data-id="t-2024" data-group="linha-do-tempo" data-title="2024: estado, ciclos e um protocolo para ferramentas">
+    <header class="tl-head">
+      <span class="tl-year" data-year="2024" data-from="2023">2024</span>
+      <div class="tl-ruler" style="--pos: 2" aria-hidden="true">
+        <div class="tl-track"><div class="tl-fill"></div></div>
+        <ol><li class="is-past">2022</li><li class="is-past">2023</li><li class="is-current">2024</li><li>2025</li><li>2026</li></ol>
+      </div>
+    </header>
+    <h2>Estado, ciclos e um protocolo para ferramentas</h2>
+    <div class="tl-cols">
+      <article class="card tl-card">
+        <p class="tl-tag"><img class="logo" src="assets/img/logos/langgraph.svg" alt=""><b>LangGraph</b><span>janeiro</span></p>
+        <p class="tl-text">O fluxo guarda o que já aconteceu e decide continuar, repetir ou encerrar.</p>
+        <div class="branch">
+          <div class="chain-node branch-root"><i class="ic" data-icon="history"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" /> <path d="M3 3v5h5" /> <path d="M12 7v5l4 2" /> </svg></i><b>Estado</b><span>o que já aconteceu</span></div>
+          <ul class="branch-out">
+            <li><i class="ic" data-icon="arrow-right"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M5 12h14" /> <path d="m12 5 7 7-7 7" /> </svg></i>continuar</li><li><i class="ic" data-icon="repeat"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="m17 2 4 4-4 4" /> <path d="M3 11v-1a4 4 0 0 1 4-4h14" /> <path d="m7 22-4-4 4-4" /> <path d="M21 13v1a4 4 0 0 1-4 4H3" /> </svg></i>repetir</li><li><i class="ic" data-icon="square"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <rect width="18" height="18" x="3" y="3" rx="2" /> </svg></i>encerrar</li>
+          </ul>
+        </div>
+      </article>
+      <article class="card tl-card">
+        <p class="tl-tag"><img class="logo" src="assets/img/logos/modelcontextprotocol.svg" alt=""><b>MCP · Model Context Protocol</b><span>25 de novembro</span></p>
+        <p class="tl-text">Um protocolo aberto para conectar ferramentas e dados.</p>
+        <div class="mcp">
+          <svg class="mcp-lines" viewBox="0 0 744 240" aria-hidden="true">
+            <defs>
+              <marker id="mcp-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" /></marker>
+            </defs>
+            <path d="M202 120 H270" marker-start="url(#mcp-arrow)" marker-end="url(#mcp-arrow)" />
+            <path d="M472 120 C508 120 508 45 542 45" marker-end="url(#mcp-arrow)" />
+            <path d="M472 120 H542" marker-end="url(#mcp-arrow)" />
+            <path d="M472 120 C508 120 508 195 542 195" marker-end="url(#mcp-arrow)" />
+          </svg>
+          <div class="mcp-node mcp-app"><i class="ic" data-icon="bot"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M12 8V4H8" /> <rect width="16" height="12" x="4" y="8" rx="2" /> <path d="M2 14h2" /> <path d="M20 14h2" /> <path d="M15 13v2" /> <path d="M9 13v2" /> </svg></i><b>Aplicação de IA</b></div>
+          <div class="mcp-node mcp-server"><img class="logo" src="assets/img/logos/modelcontextprotocol.svg" alt=""><b>Servidor MCP</b></div>
+          <div class="mcp-node mcp-t1"><i class="ic" data-icon="folder"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z" /> </svg></i>Arquivos</div>
+          <div class="mcp-node mcp-t2"><i class="ic" data-icon="database"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <ellipse cx="12" cy="5" rx="9" ry="3" /> <path d="M3 5V19A9 3 0 0 0 21 19V5" /> <path d="M3 12A9 3 0 0 0 21 12" /> </svg></i>Banco</div>
+          <div class="mcp-node mcp-t3"><i class="ic" data-icon="globe"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <circle cx="12" cy="12" r="10" /> <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" /> <path d="M2 12h20" /> </svg></i>APIs</div>
+        </div>
+      </article>
+    </div>
+    <p class="footnote">O MCP padroniza a integração; as permissões continuam na implementação. Fontes: LangGraph (jan/2024); anúncio da Anthropic (25/11/2024) e modelcontextprotocol.io.</p>
+    <aside class="notes">Enfatize o MCP: ele volta no slide 12. Antes, cada integração era escrita à mão para cada aplicação; com o MCP, um servidor serve a qualquer cliente compatível.</aside>
+  </section>
+
+  <!-- 6 · 2025 -->
+  <section class="slide s-ano" data-id="t-2025" data-group="linha-do-tempo" data-title="2025: a IA passa a trabalhar dentro do projeto">
+    <header class="tl-head">
+      <span class="tl-year" data-year="2025" data-from="2024">2025</span>
+      <div class="tl-ruler" style="--pos: 3" aria-hidden="true">
+        <div class="tl-track"><div class="tl-fill"></div></div>
+        <ol><li class="is-past">2022</li><li class="is-past">2023</li><li class="is-past">2024</li><li class="is-current">2025</li><li>2026</li></ol>
+      </div>
+    </header>
+    <h2>A IA passa a trabalhar dentro do projeto</h2>
+    <div class="tl-cols tl-cols-wide">
+      <div class="term-window">
+        <div class="term-bar"><i></i><i></i><i></i><span>meu-projeto · terminal</span></div>
+        <div class="term-body">
+          <div class="term-line" data-t="cmd">claude "corrija o filtro de busca"</div>
+          <div class="term-line" data-t="dim">lendo src/busca.py</div>
+          <div class="term-line" data-t="del">if filtro and termo:</div>
+          <div class="term-line" data-t="add">if filtro is not None and termo:</div>
+          <div class="term-line" data-t="cmd">pytest -q</div>
+          <div class="term-line" data-t="ok">12 passed</div>
+          <div class="term-line" data-t="dim">diff pronto para revisão</div>
+        </div>
+      </div>
+      <div class="tl-stack">
+        <article class="card tl-mini">
+          <p class="tl-tag"><img class="logo" src="assets/img/logos/claude.svg" alt=""><b>Claude Code</b><span>preview em fevereiro · disponível em maio</span></p>
+        </article>
+        <article class="card tl-mini">
+          <p class="tl-tag"><img class="logo" src="assets/img/logos/openai.svg" alt=""><b>Codex CLI</b><span>abril · terminal</span></p>
+        </article>
+        <article class="card tl-mini">
+          <p class="tl-tag"><img class="logo" src="assets/img/logos/anthropic.svg" alt=""><b>Agent Skills</b><span>outubro</span></p>
+          <p class="tl-mini-text">Procedimentos, scripts e referências carregados conforme a tarefa.</p>
+        </article>
+      </div>
+    </div>
+    <p class="footnote">Representação didática. A CLI conduz a execução; o modelo é uma escolha separada. Fontes: anúncios da Anthropic (fev, mai e out/2025) e da OpenAI (abr/2025).</p>
+    <aside class="notes">O agente lê o arquivo, propõe o diff, roda os testes e para para revisão. É isso que muda o papel do desenvolvedor do slide 2.</aside>
+  </section>
+
+  <!-- 7 · 2026 -->
+  <section class="slide s-ano" data-id="t-2026" data-group="linha-do-tempo" data-title="2026: agentes que trabalham enquanto você revisa">
+    <header class="tl-head">
+      <span class="tl-year" data-year="2026" data-from="2025">2026</span>
+      <div class="tl-ruler" style="--pos: 4" aria-hidden="true">
+        <div class="tl-track"><div class="tl-fill"></div></div>
+        <ol><li class="is-past">2022</li><li class="is-past">2023</li><li class="is-past">2024</li><li class="is-past">2025</li><li class="is-current">2026</li></ol>
+      </div>
+    </header>
+    <h2>Agentes que trabalham enquanto você revisa</h2>
+    <div class="tl-three">
+      <article class="card tl-card">
+        <p class="tl-tag"><i class="ic" data-icon="shield-check"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" /> <path d="m9 12 2 2 4-4" /> </svg></i><b>Auto mode</b></p>
+        <p class="tl-text">Sem pedir aprovação a cada comando; um classificador revisa o que for arriscado antes de executar.</p>
+      </article>
+      <article class="card tl-card">
+        <p class="tl-tag"><i class="ic" data-icon="users"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /> <path d="M16 3.128a4 4 0 0 1 0 7.744" /> <path d="M22 21v-2a4 4 0 0 0-3-3.87" /> <circle cx="9" cy="7" r="4" /> </svg></i><b>Subagentes</b></p>
+        <p class="tl-text">Trabalho independente em paralelo, sem poluir a conversa principal.</p>
+      </article>
+      <article class="card tl-card">
+        <p class="tl-tag"><i class="ic" data-icon="git-branch"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M15 6a9 9 0 0 0-9 9V3" /> <circle cx="18" cy="6" r="3" /> <circle cx="6" cy="18" r="3" /> </svg></i><b>Sessões em paralelo</b></p>
+        <p class="tl-text"><code>claude -w feature-x</code> abre uma sessão em outra worktree. Também no desktop, na web e em agendamentos.</p>
+      </article>
+    </div>
+    <div class="chain chain-wide">
+      <div class="chain-node"><i class="ic" data-icon="message-square"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z" /> </svg></i><b>Pedido</b></div>
+      <div class="chain-node"><i class="ic" data-icon="bot"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M12 8V4H8" /> <rect width="16" height="12" x="4" y="8" rx="2" /> <path d="M2 14h2" /> <path d="M20 14h2" /> <path d="M15 13v2" /> <path d="M9 13v2" /> </svg></i><b>Agente</b></div>
+      <div class="chain-node"><i class="ic" data-icon="circle-check"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <circle cx="12" cy="12" r="10" /> <path d="m16 9-5.5 5.5L8 12" /> </svg></i><b>Checagem automática</b></div>
+      <div class="chain-node is-human"><i class="ic" data-icon="eye"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0" /> <circle cx="12" cy="12" r="3" /> </svg></i><b>Revisão humana</b></div>
+    </div>
+    <p class="footnote">Recursos conforme a documentação oficial (code.claude.com/docs) em novembro de 2026. Autonomia sempre dentro de permissões.</p>
+    <aside class="notes">Feche a linha do tempo: o agente ficou mais autônomo, e por isso a revisão humana e as checagens automáticas ficaram mais importantes, não menos.</aside>
+  </section>
+
+  <!-- 8 · ONDE USAR -->
+  <section class="slide s-onde-usar" data-id="onde-usar" data-title="Três lugares para trabalhar com um agente de código">
+    <p class="kicker">ONDE USAR</p>
+    <h2>Três lugares para trabalhar com um agente de código</h2>
+    <div class="where">
+      <article class="where-col is-ide">
+        <div class="where-icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48"><rect x="6" y="8" width="36" height="32" rx="3"/><path d="M6 16 H42 M12 23 H28 M12 29 H34 M12 35 H22"/></svg>
+        </div>
+        <h3>IDE</h3>
+        <p class="where-desc">Um editor feito para agentes</p>
+        <ul class="where-tools"><li><img class="logo" src="assets/img/logos/cursor.svg" alt="">Cursor</li><li>Antigravity</li><li>Kiro</li></ul>
+      </article>
+      <article class="where-col is-plugin">
+        <div class="where-icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48"><path d="M18 5 V14 M30 5 V14"/><rect x="12" y="14" width="24" height="13" rx="3"/><path d="M24 27 V33 C24 39 19 42 13 42"/></svg>
+        </div>
+        <h3>Plugin</h3>
+        <p class="where-desc">Um agente dentro do seu editor</p>
+        <ul class="where-tools"><li><img class="logo" src="assets/img/logos/githubcopilot.svg" alt="">GitHub Copilot</li><li><img class="logo" src="assets/img/logos/claude.svg" alt="">Extensão do Claude Code para VS Code e JetBrains</li></ul>
+      </article>
+      <article class="where-col is-cli">
+        <div class="where-icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48"><rect x="6" y="8" width="36" height="32" rx="3"/><path d="M13 19 L19 24 L13 29 M23 30 H33"/></svg>
+        </div>
+        <h3>CLI</h3>
+        <p class="where-desc">Um agente no seu terminal</p>
+        <ul class="where-tools"><li class="is-key"><img class="logo" src="assets/img/logos/claude.svg" alt="">Claude Code</li><li><img class="logo" src="assets/img/logos/openai.svg" alt="">Codex CLI</li><li><img class="logo" src="assets/img/logos/googlegemini.svg" alt="">Gemini CLI</li><li><img class="logo" src="assets/img/logos/cursor.svg" alt="">Cursor CLI</li><li><img class="logo" src="assets/img/logos/opencode.svg" alt="">OpenCode · <img class="logo" src="assets/img/logos/pi.svg" alt="">Pi</li></ul>
+        <p class="where-badge">também no desktop, na web e no VS Code</p>
+      </article>
+    </div>
+    <p class="where-take">O tipo de ferramenta é o mesmo; muda onde você conversa com ela. Nesta palestra, vamos de terminal.</p>
+    <p class="footnote">Lista ilustrativa, não exaustiva. As ferramentas mudam rápido: nomes conferidos nas páginas oficiais antes do evento.</p>
+    <aside class="notes">Pergunte quem usa cada um dos três. Os conceitos da palestra (contexto, checagem e limites) valem para todos; daqui em diante, o exemplo é o Claude Code no terminal.</aside>
+  </section>
+
+  <!-- 9 · LOOP -->
+  <section class="slide s-loop" data-id="loop" data-title="Como o Claude Code trabalha: um loop com ferramentas">
+    <p class="kicker">MODELO MENTAL</p>
+    <h2>Como o Claude Code trabalha: um loop com ferramentas</h2>
+    <div class="loop9">
+      <svg class="loop9-lines" viewBox="0 0 1680 440" aria-hidden="true">
+        <defs>
+          <marker id="loop9-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="4" markerHeight="4" orient="auto"><path d="M0 0 L10 5 L0 10 z" /></marker>
+        </defs>
+        <path d="M400 80 H676" marker-end="url(#loop9-arrow)" />
+        <path d="M880 160 V276" marker-end="url(#loop9-arrow)" />
+        <path d="M680 360 H404" marker-end="url(#loop9-arrow)" />
+        <path d="M200 280 V164" marker-end="url(#loop9-arrow)" />
+        <path class="loop9-in" d="M1160 360 H1084" marker-end="url(#loop9-arrow)" />
+      </svg>
+      <div class="loop9-node n-ctx"><i class="ic" data-icon="search"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="m21 21-4.34-4.34" /> <circle cx="11" cy="11" r="8" /> </svg></i><b>Reunir contexto</b><span>lê arquivos, busca, CLAUDE.md</span></div>
+      <div class="loop9-node n-plan"><i class="ic" data-icon="map"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M14.106 5.553a2 2 0 0 0 1.788 0l3.659-1.83A1 1 0 0 1 21 4.619v12.764a1 1 0 0 1-.553.894l-4.553 2.277a2 2 0 0 1-1.788 0l-4.212-2.106a2 2 0 0 0-1.788 0l-3.659 1.83A1 1 0 0 1 3 19.381V6.618a1 1 0 0 1 .553-.894l4.553-2.277a2 2 0 0 1 1.788 0z" /> <path d="M15 5.764v15" /> <path d="M9 3.236v15" /> </svg></i><b>Planejar</b><span>decide o próximo passo</span></div>
+      <div class="loop9-node n-act"><i class="ic" data-icon="wrench"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.106-3.105c.32-.322.863-.22.983.218a6 6 0 0 1-8.259 7.057l-7.91 7.91a1 1 0 0 1-2.999-3l7.91-7.91a6 6 0 0 1 7.057-8.259c.438.12.54.662.219.984z" /> </svg></i><b>Agir</b><span>edita, roda comandos</span></div>
+      <div class="loop9-node n-ver"><i class="ic" data-icon="circle-check"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <circle cx="12" cy="12" r="10" /> <path d="m16 9-5.5 5.5L8 12" /> </svg></i><b>Verificar</b><span>testes, build, diff</span></div>
+      <p class="loop9-center">repete até<br>terminar</p>
+      <div class="loop9-tools">
+        <p class="loop9-tools-title">Ferramentas</p>
+        <ul><li><i class="ic" data-icon="file-text"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z" /> <path d="M14 2v5a1 1 0 0 0 1 1h5" /> <path d="M10 9H8" /> <path d="M16 13H8" /> <path d="M16 17H8" /> </svg></i>Read</li><li><i class="ic" data-icon="pencil"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z" /> <path d="m15 5 4 4" /> </svg></i>Edit</li><li><i class="ic" data-icon="terminal"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M12 19h8" /> <path d="m4 17 6-6-6-6" /> </svg></i>Bash</li><li><i class="ic" data-icon="globe"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <circle cx="12" cy="12" r="10" /> <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" /> <path d="M2 12h20" /> </svg></i>Web</li><li><img class="logo" src="assets/img/logos/modelcontextprotocol.svg" alt="">MCP</li><li><i class="ic" data-icon="users"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /> <path d="M16 3.128a4 4 0 0 1 0 7.744" /> <path d="M22 21v-2a4 4 0 0 0-3-3.87" /> <circle cx="9" cy="7" r="4" /> </svg></i>Subagentes</li></ul>
+      </div>
+    </div>
+    <p class="loop9-take">Você pode interromper a qualquer momento com <kbd>Esc</kbd>; o trabalho feito até ali fica.</p>
+    <p class="footnote">Diagrama simplificado, baseado em "How Claude Code works" (code.claude.com/docs).</p>
+    <aside class="notes">Este é o modelo mental da palestra. Volte a ele no slide 12: o contexto alimenta "Reunir contexto".</aside>
+  </section>
+
+  <!-- 10 · COMEÇAR -->
+  <section class="slide s-comecar" data-id="comecar" data-title="Começar leva três comandos">
+    <p class="kicker">PRIMEIROS PASSOS</p>
+    <h2>Começar leva três comandos</h2>
+    <div class="start">
+      <div class="term-window">
+        <div class="term-bar"><i></i><i></i><i></i><span>terminal</span></div>
+        <div class="term-body">
+          <div class="term-line" data-t="cmd">curl -fsSL https://claude.ai/install.sh | bash</div>
+          <div class="term-line" data-t="cmd">cd meu-projeto &amp;&amp; claude</div>
+          <div class="term-line" data-t="prompt">/init</div>
+          <div class="term-line" data-t="dim">analisando o projeto…</div>
+          <div class="term-line" data-t="ok">✓ CLAUDE.md criado</div>
+        </div>
+      </div>
+      <div class="start-side">
+        <article class="card start-file">
+          <p class="start-file-name"><i class="ic" data-icon="file-text"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z" /> <path d="M14 2v5a1 1 0 0 0 1 1h5" /> <path d="M10 9H8" /> <path d="M16 13H8" /> <path d="M16 17H8" /> </svg></i>CLAUDE.md</p>
+          <p>O <code>/init</code> gera um rascunho. O trabalho depois é <b>cortar</b> linhas: a doc recomenda menos de 200.</p>
+        </article>
+        <article class="card start-alt">
+          <h3>Outras formas</h3>
+          <ul>
+            <li><span><img class="logo" src="assets/img/logos/apple.svg" alt="">macOS · <img class="logo" src="assets/img/logos/homebrew.svg" alt="">Homebrew</span><code>brew install --cask claude-code</code></li>
+            <li><span><i class="ic" data-icon="monitor"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <rect width="20" height="14" x="2" y="3" rx="2" /> <line x1="8" x2="16" y1="21" y2="21" /> <line x1="12" x2="12" y1="17" y2="21" /> </svg></i>Windows · PowerShell</span><code>irm https://claude.ai/install.ps1 | iex</code></li>
+            <li><span><i class="ic" data-icon="layers"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z" /> <path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12" /> <path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17" /> </svg></i>Também</span><span class="start-also">VS Code, <img class="logo" src="assets/img/logos/jetbrains.svg" alt="">JetBrains, desktop e web</span></li>
+          </ul>
+        </article>
+      </div>
+    </div>
+    <p class="footnote">Comandos conferidos no Quickstart de code.claude.com/docs em novembro de 2026. Saída do terminal simplificada.</p>
+    <aside class="notes">Se houver tempo e internet, faça a demo ao vivo do /init num repositório pequeno. Tenha o screenshot de backup.</aside>
+  </section>
+
+  <!-- 11 · COMANDOS -->
+  <section class="slide s-comandos" data-id="comandos" data-title="Os comandos que você usa todo dia">
+    <p class="kicker">DIA A DIA</p>
+    <h2>Os comandos que você usa todo dia</h2>
+    <nav class="cmd-tabs" aria-label="Grupos de comandos">
+      <button class="step"><b>01</b> <i class="ic" data-icon="message-square"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z" /> </svg></i>Sessão</button>
+      <button class="step"><b>02</b> <i class="ic" data-icon="layers"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z" /> <path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12" /> <path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17" /> </svg></i>Contexto</button>
+      <button class="step"><b>03</b> <i class="ic" data-icon="hand"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M18 11V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2" /> <path d="M14 10V4a2 2 0 0 0-2-2a2 2 0 0 0-2 2v2" /> <path d="M10 10.5V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2v8" /> <path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15" /> </svg></i>Controle</button>
+      <button class="step"><b>04</b> <i class="ic" data-icon="history"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" /> <path d="M3 3v5h5" /> <path d="M12 7v5l4 2" /> </svg></i>Retomar</button>
+    </nav>
+    <div class="cmd-stage">
+      <div class="panel cmd-panel" data-panel="0">
+        <h3>Sessão</h3>
+        <ul class="cmd-list">
+          <li><div class="cmd-k"><code>/</code></div><span>lista comandos e skills</span></li>
+          <li><div class="cmd-k"><code>/help</code></div><span>ajuda e comandos disponíveis</span></li>
+          <li class="is-key"><div class="cmd-k"><code>@arquivo</code></div><span>aponta um arquivo no pedido</span></li>
+          <li><div class="cmd-k"><code>Shift+Tab</code></div><span>alterna o modo de permissão</span></li>
+          <li><div class="cmd-k"><code>/model</code> <code>/effort</code></div><span>troca o modelo e o esforço</span></li>
+        </ul>
+      </div>
+      <div class="panel cmd-panel" data-panel="1">
+        <h3>Contexto</h3>
+        <ul class="cmd-list">
+          <li><div class="cmd-k"><code>/context</code></div><span>o que está ocupando o contexto</span></li>
+          <li class="is-key"><div class="cmd-k"><code>/clear</code></div><span>conversa nova entre tarefas diferentes</span></li>
+          <li><div class="cmd-k"><code>/compact &lt;foco&gt;</code></div><span>resume mantendo o importante</span></li>
+          <li><div class="cmd-k"><code>/btw</code></div><span>pergunta rápida que não entra no histórico</span></li>
+        </ul>
+      </div>
+      <div class="panel cmd-panel" data-panel="2">
+        <h3>Controle</h3>
+        <ul class="cmd-list">
+          <li><div class="cmd-k"><code>Esc</code></div><span>para e redireciona; o feito fica</span></li>
+          <li class="is-key"><div class="cmd-k"><code>Esc Esc</code> <code>/rewind</code></div><span>volta código e conversa a um ponto anterior</span></li>
+          <li><div class="cmd-k"><code>/permissions</code></div><span>regras allow, ask e deny</span></li>
+          <li><div class="cmd-k"><code>/hooks</code></div><span>mostra os hooks configurados</span></li>
+        </ul>
+      </div>
+      <div class="panel cmd-panel" data-panel="3">
+        <h3>Retomar e automatizar</h3>
+        <ul class="cmd-list">
+          <li><div class="cmd-k"><code>claude -c</code></div><span>continua a última conversa</span></li>
+          <li><div class="cmd-k"><code>claude -r &lt;nome&gt;</code></div><span>retoma uma sessão (<code>--resume</code>)</span></li>
+          <li><div class="cmd-k"><code>/rename</code></div><span>dá nome à sessão</span></li>
+          <li class="is-key"><div class="cmd-k"><code>claude -p "..."</code></div><span>uma execução, para scripts e CI</span></li>
+          <li><div class="cmd-k"><code>/code-review</code></div><span>revisa o diff atual</span></li>
+        </ul>
+      </div>
+    </div>
+    <p class="footnote">Lista resumida, conferida em novembro de 2026. Referência completa: code.claude.com/docs/en/commands</p>
+    <aside class="notes">Não leia todos. Clique em cada aba e destaque um por aba: @arquivo, /clear, Esc Esc, claude -p.</aside>
+  </section>
+
+  <!-- 12 · CONTEXTO -->
+  <section class="slide s-contexto" data-id="contexto" data-title="Diga ao Claude o que ele não vê no código">
+    <p class="kicker">CONTEXTO</p>
+    <h2>Diga ao Claude o que ele não vê no código</h2>
+    <div class="ctx">
+      <ol class="layers">
+        <li class="layer"><span class="layer-when">toda sessão</span><div><b><i class="ic" data-icon="file-text"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z" /> <path d="M14 2v5a1 1 0 0 0 1 1h5" /> <path d="M10 9H8" /> <path d="M16 13H8" /> <path d="M16 17H8" /> </svg></i>CLAUDE.md</b><p>Comandos de build e teste, convenções, armadilhas. Curto.</p></div></li>
+        <li class="layer"><span class="layer-when">por pasta</span><div><b><i class="ic" data-icon="folder-tree"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M20 10a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1h-2.5a1 1 0 0 1-.8-.4l-.9-1.2A1 1 0 0 0 15 3h-2a1 1 0 0 0-1 1v5a1 1 0 0 0 1 1Z" /> <path d="M20 21a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1h-2.9a1 1 0 0 1-.88-.55l-.42-.85a1 1 0 0 0-.92-.6H13a1 1 0 0 0-1 1v5a1 1 0 0 0 1 1Z" /> <path d="M3 5a2 2 0 0 0 2 2h3" /> <path d="M3 3v13a2 2 0 0 0 2 2h3" /> </svg></i><code>.claude/rules/</code> com <code>paths:</code></b><p>Só carrega quando ele mexe naquela parte do código.</p></div></li>
+        <li class="layer"><span class="layer-when">sob demanda</span><div><b><i class="ic" data-icon="puzzle"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M15.39 4.39a1 1 0 0 0 1.68-.474 2.5 2.5 0 1 1 3.014 3.015 1 1 0 0 0-.474 1.68l1.683 1.682a2.414 2.414 0 0 1 0 3.414L19.61 15.39a1 1 0 0 1-1.68-.474 2.5 2.5 0 1 0-3.014 3.015 1 1 0 0 1 .474 1.68l-1.683 1.682a2.414 2.414 0 0 1-3.414 0L8.61 19.61a1 1 0 0 0-1.68.474 2.5 2.5 0 1 1-3.014-3.015 1 1 0 0 0 .474-1.68l-1.683-1.682a2.414 2.414 0 0 1 0-3.414L4.39 8.61a1 1 0 0 1 1.68.474 2.5 2.5 0 1 0 3.014-3.015 1 1 0 0 1-.474-1.68l1.683-1.682a2.414 2.414 0 0 1 3.414 0z" /> </svg></i>Skills</b><p>Procedimentos em <code>.claude/skills/</code>, também como <code>/nome</code>.</p></div></li>
+        <li class="layer"><span class="layer-when">integrações</span><div><b><img class="logo" src="assets/img/logos/modelcontextprotocol.svg" alt="">MCP</b><p><code>claude mcp add</code> para sistemas sem CLI: Notion, banco, issues.</p></div></li>
+      </ol>
+      <div class="ctx-side">
+        <div class="term-window">
+          <div class="term-bar"><i></i><i></i><i></i><span>CLAUDE.md</span></div>
+          <div class="term-body">
+            <div class="term-line" data-t="h"># Commands</div>
+            <div class="term-line" data-t="out">npm test · npm run typecheck</div>
+            <div class="term-line" data-t="h"># Conventions</div>
+            <div class="term-line" data-t="out">named exports; zod nas rotas</div>
+            <div class="term-line" data-t="h"># Gotchas</div>
+            <div class="term-line" data-t="out">migrations/ é gerado: não editar</div>
+          </div>
+        </div>
+        <p class="ctx-tip">Rode <code>/context</code> para confirmar o que foi carregado.</p>
+      </div>
+    </div>
+    <p class="footnote">Exemplo de CLAUDE.md enxuto, ilustrativo. Camadas conforme "Memory" e "Best practices" (code.claude.com/docs).</p>
+    <aside class="notes">O CLAUDE.md é lido em toda sessão, então cada linha custa atenção. Só o que o modelo não descobre lendo o código. Lembre do MCP do slide de 2024: é aqui que ele entra.</aside>
+  </section>
+
+</main>
+
+<!-- painel de opções (o motor acrescenta os botões padrão) -->
+<div id="deck-options" hidden>
+  <div class="deck-panel">
+    <header><h2>Apresentação e materiais</h2><button class="deck-btn" data-action="close">Fechar</button></header>
+    <p><a href="downloads/deck.pdf?v=1">Baixar PDF</a> · <a href="downloads/deck.pptx?v=1">Baixar PowerPoint</a></p>
+  </div>
+</div>
+
+<script src="vendor/gsap.min.js"></script>
+<script src="js/recipes.js"></script>
+<script src="js/deck.js"></script>
+<!-- uma cena por arquivo, mesmo nome do data-id -->
+<script src="js/scenes/capa.js"></script>
+<script src="js/scenes/por-que.js"></script>
+<script src="js/scenes/linha-do-tempo.js"></script>
+<script src="js/scenes/onde-usar.js"></script>
+<script src="js/scenes/loop.js"></script>
+<script src="js/scenes/comecar.js"></script>
+<script src="js/scenes/comandos.js"></script>
+<script src="js/scenes/contexto.js"></script>
+</body>
+</html>

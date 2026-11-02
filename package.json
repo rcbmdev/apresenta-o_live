@@ -1,0 +1,25 @@
+{
+  "name": "apresentacao-live",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Deck interativo em HTML + GSAP, com QA e exportação para PDF/PPTX",
+  "scripts": {
+    "setup": "npm install && npx playwright install chromium && npm run vendor && npm run icons",
+    "vendor": "node scripts/vendor.mjs",
+    "icons": "node scripts/icons.mjs",
+    "dev": "npx --yes serve deck -l 5173",
+    "qa": "node scripts/qa.mjs",
+    "qa:all": "node scripts/qa.mjs --viewports=all",
+    "export": "node scripts/export.mjs"
+  },
+  "devDependencies": {
+    "@fontsource-variable/jetbrains-mono": "^5.2.0",
+    "@fontsource-variable/space-grotesk": "^5.2.0",
+    "gsap": "^3.13.0",
+    "lucide-static": "^1.66.0",
+    "playwright": "^1.55.0",
+    "pptxgenjs": "^4.0.1",
+    "simple-icons": "^16.36.0"
+  }
+}

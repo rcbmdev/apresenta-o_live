@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Título da palestra · Evento</title>
+  <meta name="description" content="Resumo de uma linha da palestra.">
+  <meta name="theme-color" content="#05070d">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/deck.css">
+  <link rel="stylesheet" href="css/scenes.css">
+</head>
+<body>
+<main class="deck" aria-live="polite">
+
+  <!-- 1 · CAPA -->
+  <section class="slide s-capa" data-id="capa" data-title="Capa">
+    <div class="glow" aria-hidden="true"></div>
+    <p class="kicker">EVENTO 2026 · PALESTRA</p>
+    <h1 class="hero-title">Apresentações que se mexem</h1>
+    <p class="lead">Um deck em HTML, GSAP e verificação automática.</p>
+    <p class="byline"><b>Seu Nome</b> · sua escola ou empresa</p>
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track"><span>HTML · CSS · GSAP · PLAYWRIGHT · CLAUDE CODE · </span><span>HTML · CSS · GSAP · PLAYWRIGHT · CLAUDE CODE · </span></div>
+    </div>
+    <aside class="notes">Abertura: apresente-se em 20 segundos e diga o que o público vai levar.</aside>
+  </section>
+
+  <!-- 2 · NÚMEROS -->
+  <section class="slide s-numeros" data-id="numeros" data-title="Números que contam">
+    <p class="kicker">CONTADOR + ODÔMETRO</p>
+    <h2>Números que contam sozinhos</h2>
+    <div class="stats">
+      <div class="stat card">
+        <span class="stat-value" data-count="1000000" data-prefix="+">+1.000.000</span>
+        <span class="stat-label">alunos (valor de exemplo)</span>
+      </div>
+      <div class="stat card">
+        <span class="stat-value year" data-year="2026">2026</span>
+        <span class="stat-label">ano rolando dígito a dígito</span>
+      </div>
+      <div class="stat card">
+        <span class="stat-value" data-count="98" data-suffix="%">98%</span>
+        <span class="stat-label">de satisfação (valor de exemplo)</span>
+      </div>
+    </div>
+    <p class="footnote">Valores ilustrativos. Troque por dados reais e cite a fonte aqui.</p>
+  </section>
+
+  <!-- 3 · TERMINAL -->
+  <section class="slide s-terminal" data-id="terminal" data-title="Terminal ao vivo">
+    <p class="kicker">TERMINAL + DIFF</p>
+    <h2>O agente lê, corrige e testa</h2>
+    <div class="term-window">
+      <div class="term-bar"><i></i><i></i><i></i><span>projeto · terminal</span></div>
+      <div class="term-body">
+        <div class="term-line" data-t="cmd">claude "corrija o filtro de busca"</div>
+        <div class="term-line" data-t="dim">lendo src/busca.py</div>
+        <div class="term-line" data-t="del">if filtro and termo:</div>
+        <div class="term-line" data-t="add">if filtro is not None and termo:</div>
+        <div class="term-line" data-t="cmd">pytest -q</div>
+        <div class="term-line" data-t="ok">12 passed in 0.84s</div>
+        <div class="term-line" data-t="dim">diff pronto para revisão</div>
+      </div>
+    </div>
+    <p class="footnote">Representação didática: ler arquivos, alterar código, testar e revisar o diff.</p>
+  </section>
+
+  <!-- 4 · FLUXO -->
+  <section class="slide s-fluxo" data-id="fluxo" data-title="Pipeline animado">
+    <p class="kicker">FLUXO COM PACOTE</p>
+    <h2>Da pesquisa à publicação</h2>
+    <div class="flow">
+      <svg class="flow-lines" viewBox="0 0 1680 200" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M168 100 H 1512" />
+      </svg>
+      <div class="flow-node"><b>Pesquisa</b><span>web e fontes</span></div>
+      <div class="flow-node"><b>Texto</b><span>manchete e legenda</span></div>
+      <div class="flow-node"><b>Arte</b><span>1080 × 1350</span></div>
+      <div class="flow-node"><b>Revisão</b><span>humana</span></div>
+      <div class="flow-node"><b>Publicação</b><span>no horário</span></div>
+    </div>
+    <p class="footnote">O pacote percorre as etapas em loop enquanto o slide está aberto.</p>
+  </section>
+
+  <!-- 5 · STEPPER -->
+  <section class="slide s-steps" data-id="workflow" data-title="Workflow em etapas">
+    <p class="kicker">ETAPAS CLICÁVEIS</p>
+    <h2>Workflow em quatro passos</h2>
+    <div class="steps-layout">
+      <nav class="steps" aria-label="Etapas">
+        <button class="step"><b>01</b> Refinar o pedido</button>
+        <button class="step"><b>02</b> Gerar o PRD</button>
+        <button class="step"><b>03</b> Executar a sprint</button>
+        <button class="step"><b>04</b> Revisar e versionar</button>
+      </nav>
+      <div class="step-stage card">
+        <div class="panel" data-panel="0"><h3>Pedido refinado</h3><p>Objetivo, usuários, regras e restrições escritos antes do código.</p></div>
+        <div class="panel" data-panel="1"><h3># PRD.md</h3><p>Requisitos, critérios de aceite e sprints.</p></div>
+        <div class="panel" data-panel="2"><h3>Sprint 1</h3><p>O agente implementa uma fatia pequena e testável.</p></div>
+        <div class="panel" data-panel="3"><h3>git commit</h3><p>Diff revisado, testes passando, próxima sprint.</p></div>
+      </div>
+    </div>
+    <p class="footnote">Clique numa etapa para assumir o controle; <kbd>R</kbd> retoma a demonstração automática.</p>
+  </section>
+
+  <!-- 6 · CHAT -->
+  <section class="slide s-chat" data-id="chat" data-title="Conversa no celular">
+    <p class="kicker">MOCKUP DE CHAT</p>
+    <div class="chat-layout">
+      <div>
+        <h2>Aprovação pelo celular</h2>
+        <p class="lead">O agente prepara; a pessoa decide.</p>
+      </div>
+      <div class="phone">
+        <div class="phone-head"><span class="avatar"></span><b>Assistente</b></div>
+        <div class="phone-body">
+          <div class="bubble bubble-them">Preparei a correção com testes e riscos descritos. Aprova esta revisão?</div>
+          <div class="bubble bubble-me">Aprovado 👍</div>
+          <div class="bubble bubble-them">Merge feito. Deploy verificado na versão servida.</div>
+        </div>
+      </div>
+    </div>
+    <p class="footnote">Interface ilustrativa.</p>
+  </section>
+
+  <!-- 7 · FIM -->
+  <section class="slide s-fim" data-id="fim" data-title="Obrigado">
+    <div class="glow" aria-hidden="true"></div>
+    <p class="kicker">PERGUNTAS</p>
+    <h1 class="hero-title">Obrigado!</h1>
+    <p class="lead">slides e materiais: <span class="mono">seusite.com/palestra</span></p>
+  </section>
+
+</main>
+
+<!-- painel de opções (o motor acrescenta os botões padrão) -->
+<div id="deck-options" hidden>
+  <div class="deck-panel">
+    <header><h2>Apresentação e materiais</h2><button class="deck-btn" data-action="close">Fechar</button></header>
+    <p><a href="../dist/deck.pdf">Baixar PDF</a> · <a href="../dist/deck.pptx">Baixar PowerPoint</a></p>
+  </div>
+</div>
+
+<script src="vendor/gsap.min.js"></script>
+<script src="js/recipes.js"></script>
+<script src="js/deck.js"></script>
+<!-- uma cena por arquivo, mesmo nome do data-id -->
+<script src="js/scenes/capa.js"></script>
+<script src="js/scenes/numeros.js"></script>
+<script src="js/scenes/terminal.js"></script>
+<script src="js/scenes/fluxo.js"></script>
+<script src="js/scenes/workflow.js"></script>
+<script src="js/scenes/chat.js"></script>
+<script src="js/scenes/fim.js"></script>
+</body>
+</html>

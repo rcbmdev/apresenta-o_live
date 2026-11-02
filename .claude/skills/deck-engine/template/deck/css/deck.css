@@ -1,0 +1,122 @@
+/* deck.css — estrutura do motor: palco 16:9, transições, HUD, overlays, modo flow e print.
+   Cores e tipografia vêm de tokens.css. Estilo das cenas fica em scenes.css. */
+
+*, *::before, *::after { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; background: var(--bg); color: var(--fg); }
+body { font-family: var(--font-sans); overflow: hidden; -webkit-font-smoothing: antialiased; }
+img, svg, video { max-width: 100%; display: block; }
+button { font: inherit; color: inherit; }
+
+/* ---------- palco fixo 1920×1080, escalado pelo deck.js ---------- */
+.deck {
+  position: absolute; left: 50%; top: 50%;
+  width: 1920px; height: 1080px;
+  transform-origin: 50% 50%;
+  transform: translate(-50%, -50%) scale(0.5);
+  overflow: hidden;
+  background: var(--bg);
+}
+.slide {
+  position: absolute; inset: 0;
+  padding: var(--safe-y) var(--safe-x);
+  display: flex; flex-direction: column;
+  opacity: 0; visibility: hidden;
+  transform: translateX(60px);
+  transition: opacity .5s var(--ease-out), transform .6s var(--ease-out), visibility 0s linear .6s;
+}
+.slide.is-before { transform: translateX(-60px); }
+.slide.is-active {
+  opacity: 1; visibility: visible; transform: none;
+  transition: opacity .5s var(--ease-out), transform .6s var(--ease-out), visibility 0s;
+}
+.slide[data-transition="fade"], .slide[data-transition="fade"].is-before { transform: none; }
+.slide[data-transition="zoom"] { transform: scale(.96); }
+
+/* nota de rodapé honesta (padrão da referência): o que é ilustrativo, fontes, ressalvas */
+.slide .footnote {
+  margin-top: auto; padding-top: 24px;
+  font-size: var(--fs-caption); color: var(--fg-muted);
+  max-width: 1400px;
+}
+.notes { display: none; } /* <aside class="notes"> = notas do palestrante (vão para o PPTX) */
+
+/* ---------- HUD ---------- */
+.deck-hud {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 20;
+  display: flex; align-items: center; gap: 14px;
+  padding: 10px 16px; font-size: 13px; color: var(--fg-muted);
+  opacity: 0; transition: opacity .3s;
+}
+.deck-hud:hover, .deck-hud:focus-within { opacity: 1; }
+@media (hover: none) { .deck-hud { opacity: .85; } }
+.deck-progress { position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: transparent; }
+.deck-progress span { display: block; height: 100%; width: 0; background: var(--accent); transition: width .4s var(--ease-out); }
+.deck-counter { margin-left: auto; font-family: var(--font-mono); }
+.deck-timer { font-family: var(--font-mono); color: var(--accent); }
+.deck-btn {
+  background: var(--surface); border: 1px solid var(--line); border-radius: 999px;
+  padding: 6px 14px; cursor: pointer; font-size: 13px;
+}
+.deck-btn:hover { border-color: var(--accent); }
+.deck-btn:focus-visible, .deck-overlay button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+/* ---------- overlays (índice e opções) ---------- */
+.deck-overlay {
+  position: fixed; inset: 0; z-index: 30;
+  display: grid; place-items: center; padding: 16px;
+  background: color-mix(in srgb, var(--bg) 82%, transparent);
+  backdrop-filter: blur(10px);
+}
+.deck-overlay[hidden] { display: none; }
+.deck-panel {
+  width: min(960px, 100%); max-height: 86vh; overflow: auto;
+  background: var(--surface); border: 1px solid var(--line); border-radius: 20px; padding: 24px;
+}
+.deck-panel header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
+.deck-panel h2 { margin: 0; font-size: 20px; }
+.deck-index ol { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 8px; }
+.deck-index li button {
+  width: 100%; text-align: left; display: flex; gap: 12px; align-items: baseline;
+  background: transparent; border: 1px solid var(--line); border-radius: 12px; padding: 12px; cursor: pointer;
+}
+.deck-index li button:hover { border-color: var(--accent); }
+.deck-index b { font-family: var(--font-mono); color: var(--accent); }
+.deck-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.deck-keys { width: 100%; color: var(--fg-muted); font-size: 13px; line-height: 2; }
+kbd { font-family: var(--font-mono); font-size: 12px; border: 1px solid var(--line); border-radius: 6px; padding: 1px 6px; }
+.deck-panel a { color: var(--accent); }
+.deck-black { position: fixed; inset: 0; z-index: 40; background: #000; }
+.deck-black[hidden] { display: none; }
+
+/* ---------- animações pausadas (M) também pausam CSS ---------- */
+.is-paused *, .is-paused *::before, .is-paused *::after { animation-play-state: paused !important; }
+
+/* ---------- modo flow: celular/tablet em pé → leitura vertical ---------- */
+.is-flow, .is-flow body { height: auto; overflow: visible; }
+.is-flow .deck {
+  position: static; transform: none !important;
+  width: auto; height: auto; overflow: visible;
+}
+.is-flow .slide {
+  position: relative; inset: auto;
+  min-height: 100svh; padding: 56px 16px 40px; overflow: hidden; /* decorações não podem alargar a página */
+  opacity: 1; visibility: visible; transform: none;
+  border-bottom: 1px solid var(--line);
+}
+/* no flow, cada cena deve se reorganizar: use .is-flow .minha-classe em scenes.css */
+.is-flow .deck-hud { opacity: 1; background: color-mix(in srgb, var(--bg) 90%, transparent); }
+
+/* ---------- export ---------- */
+.is-export .deck-hud { display: none; }
+.is-print body { overflow: visible; }
+.is-print .deck { position: static; transform: none !important; overflow: visible; height: auto; }
+.is-print .slide {
+  position: relative; inset: auto; width: 1920px; height: 1080px;
+  opacity: 1; visibility: visible; transform: none; transition: none;
+  overflow: hidden; break-after: page; page-break-after: always;
+}
+@page { size: 1920px 1080px; margin: 0; }
+
+@media (prefers-reduced-motion: reduce) {
+  .slide { transition: opacity .2s linear, visibility 0s; transform: none !important; }
+}

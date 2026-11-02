@@ -1,0 +1,63 @@
+/* tokens.css — identidade visual do deck. ÚNICO lugar com cores, fontes e escala.
+   Para trocar a marca, edite só este arquivo (veja a skill deck-design-system). */
+
+@font-face {
+  font-family: "Space Grotesk Variable";
+  src: url("../vendor/fonts/space-grotesk-latin-wght-normal.woff2") format("woff2-variations");
+  font-weight: 300 700; font-display: swap;
+}
+@font-face {
+  font-family: "JetBrains Mono Variable";
+  src: url("../vendor/fonts/jetbrains-mono-latin-wght-normal.woff2") format("woff2-variations");
+  font-weight: 100 800; font-display: swap;
+}
+
+:root {
+  /* superfícies (tema escuro de palco: projetor e telão leem melhor) */
+  --bg: #05070d;
+  --bg-2: #0a0f1c;
+  --surface: #0f1626;
+  --surface-2: #151e33;
+  --line: #22304d;
+
+  /* texto */
+  --fg: #eef2fb;
+  --fg-muted: #93a0bd;
+  --fg-dim: #5b6788;
+
+  /* marca: um acento principal + um secundário, nada além disso */
+  --accent: #5ce1e6;
+  --accent-2: #b48cff;
+  --accent-glow: rgba(92, 225, 230, .45);
+
+  /* semânticas (terminal, diff, status) */
+  --ok: #4ade80;
+  --warn: #fbbf24;
+  --err: #f87171;
+  --add-bg: rgba(74, 222, 128, .12);
+  --del-bg: rgba(248, 113, 113, .12);
+
+  /* tipografia */
+  --font-sans: "Space Grotesk Variable", "Segoe UI", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono Variable", ui-monospace, "SF Mono", Menlo, monospace;
+
+  /* escala em px do palco 1920×1080 (o palco inteiro é escalado, então px é seguro) */
+  --fs-hero: 140px;
+  --fs-h1: 84px;
+  --fs-h2: 60px;
+  --fs-h3: 40px;
+  --fs-body: 32px;
+  --fs-small: 24px;
+  --fs-caption: 20px;   /* mínimo legível no fundo da sala */
+  --fs-code: 26px;
+
+  /* espaço e forma */
+  --safe-x: 120px;
+  --safe-y: 90px;
+  --gap: 32px;
+  --radius: 24px;
+  --radius-sm: 12px;
+
+  /* movimento */
+  --ease-out: cubic-bezier(.16, 1, .3, 1);
+}

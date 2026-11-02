@@ -1,0 +1,129 @@
+/* scenes.css — estilos dos slides. Um bloco por cena (.s-<id>), sempre usando tokens.
+   Regra: cada cena define também sua versão .is-flow (celular em pé). */
+
+/* ---------- tipografia base ---------- */
+.slide h1, .slide h2, .slide h3 { margin: 0; font-weight: 700; letter-spacing: -0.02em; line-height: 1.02; }
+.slide h2 { font-size: var(--fs-h1); max-width: 1500px; }
+.slide h3 { font-size: var(--fs-h3); }
+.slide p { margin: 0; }
+.kicker { font-family: var(--font-mono); font-size: var(--fs-small); letter-spacing: .18em; color: var(--accent); margin-bottom: 24px !important; }
+.lead { font-size: var(--fs-h3); color: var(--fg-muted); line-height: 1.25; max-width: 1300px; }
+.slide kbd { font-size: 1em; padding: 2px 10px; }
+.mono { font-family: var(--font-mono); color: var(--accent); }
+.hero-title { font-size: var(--fs-hero); max-width: 1500px; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 40px; }
+.glow {
+  position: absolute; width: 1100px; height: 1100px; right: -300px; top: -300px; pointer-events: none;
+  background: radial-gradient(closest-side, var(--accent-glow), transparent 70%); opacity: .55; filter: blur(20px);
+}
+
+/* ---------- capa / fim ---------- */
+.s-capa, .s-fim { justify-content: center; }
+.s-capa .lead { margin-top: 32px !important; }
+.s-capa .byline { margin-top: 48px !important; font-size: var(--fs-body); color: var(--fg-muted); }
+.s-capa .byline b { color: var(--fg); }
+.marquee { position: absolute; left: 0; right: 0; bottom: 70px; overflow: hidden; border-block: 1px solid var(--line); padding: 18px 0; }
+.marquee-track { display: flex; width: max-content; white-space: nowrap; font-family: var(--font-mono); font-size: var(--fs-small); letter-spacing: .2em; color: var(--fg-dim); }
+.s-fim .lead { margin-top: 40px !important; }
+
+/* ---------- números ---------- */
+.stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--gap); margin-top: 80px; }
+.stat { display: flex; flex-direction: column; gap: 16px; }
+.stat-value { font-size: 112px; font-weight: 700; color: var(--accent); font-variant-numeric: tabular-nums; line-height: 1; }
+.stat-label { font-size: var(--fs-body); color: var(--fg-muted); }
+.roll { display: inline-flex; }
+.roll-win { display: inline-block; height: 1em; overflow: hidden; line-height: 1; }
+.roll-col { display: flex; flex-direction: column; }
+.roll-col span { height: 1em; display: block; }
+
+/* ---------- terminal ---------- */
+.term-window { margin-top: 56px; max-width: 1400px; background: #070a12; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; box-shadow: 0 40px 120px rgba(0,0,0,.5); }
+.term-bar { display: flex; gap: 10px; align-items: center; padding: 18px 24px; background: var(--surface); border-bottom: 1px solid var(--line); }
+.term-bar i { width: 14px; height: 14px; border-radius: 50%; background: var(--line); }
+.term-bar i:nth-child(1) { background: var(--err); } .term-bar i:nth-child(2) { background: var(--warn); } .term-bar i:nth-child(3) { background: var(--ok); }
+.term-bar span { margin-left: 16px; font-family: var(--font-mono); font-size: var(--fs-caption); color: var(--fg-dim); }
+.term-body { padding: 32px 40px; min-height: 440px; font-family: var(--font-mono); font-size: var(--fs-code); line-height: 1.7; }
+.term-line { white-space: pre-wrap; border-radius: 6px; padding: 0 10px; }
+.term-line[data-t="cmd"]::before { content: "$ "; color: var(--accent); }
+.term-line[data-t="dim"] { color: var(--fg-dim); }
+.term-line[data-t="add"] { background: var(--add-bg); color: var(--ok); }
+.term-line[data-t="add"]::before { content: "+ "; }
+.term-line[data-t="del"] { background: var(--del-bg); color: var(--err); }
+.term-line[data-t="del"]::before { content: "- "; }
+.term-line[data-t="ok"] { color: var(--ok); font-weight: 700; }
+.is-typing::after { content: "▍"; color: var(--accent); animation: blink 1s steps(1) infinite; }
+@keyframes blink { 50% { opacity: 0; } }
+
+/* ---------- fluxo ---------- */
+.flow { position: relative; display: grid; grid-template-columns: repeat(5, 1fr); margin-top: 120px; }
+.flow-lines { position: absolute; left: 0; top: 0; width: 100%; height: 200px; overflow: visible; }
+.flow-lines path { fill: none; stroke: var(--line); stroke-width: 4; }
+.flow-node {
+  position: relative; z-index: 1; justify-self: center; width: 280px; height: 200px;
+  display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 8px; text-align: center;
+  background: var(--surface); border: 2px solid var(--line); border-radius: var(--radius);
+  transition: border-color .3s, background .3s;
+}
+.flow-node b { font-size: var(--fs-h3); }
+.flow-node span { font-size: var(--fs-small); color: var(--fg-muted); }
+.flow-node.is-on { border-color: var(--accent); background: var(--surface-2); box-shadow: 0 0 60px var(--accent-glow); }
+.flow-node.is-done { border-color: color-mix(in srgb, var(--accent) 45%, var(--line)); }
+.flow-packet { position: absolute; left: 0; top: 0; z-index: 2; width: 28px; height: 28px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 30px var(--accent); visibility: hidden; pointer-events: none; }
+
+/* ---------- etapas clicáveis ---------- */
+.steps-layout { display: grid; grid-template-columns: 560px 1fr; gap: 48px; margin-top: 64px; flex: 1; min-height: 0; }
+.steps { display: flex; flex-direction: column; gap: 16px; }
+.step {
+  text-align: left; font-size: var(--fs-body); padding: 26px 30px; cursor: pointer;
+  background: var(--surface); border: 2px solid var(--line); border-radius: var(--radius-sm); color: var(--fg-muted);
+  transition: border-color .25s, color .25s, background .25s;
+}
+.step b { font-family: var(--font-mono); color: var(--fg-dim); margin-right: 14px; }
+.step.is-past { color: var(--fg); }
+.step.is-current { border-color: var(--accent); color: var(--fg); background: var(--surface-2); }
+.step.is-current b { color: var(--accent); }
+.step-stage { position: relative; }
+.panel { position: absolute; inset: 40px; display: flex; flex-direction: column; gap: 24px; }
+.panel:not(:first-child) { visibility: hidden; } /* sem JS ou cena inativa: só o 1º painel */
+.panel h3 { font-family: var(--font-mono); color: var(--accent); }
+.panel p { font-size: var(--fs-h3); line-height: 1.3; color: var(--fg); }
+
+/* ---------- chat ---------- */
+.chat-layout { display: grid; grid-template-columns: 1fr 520px; gap: 80px; align-items: center; flex: 1; }
+.chat-layout .lead { margin-top: 32px; }
+.phone { height: 820px; background: #0b1220; border: 2px solid var(--line); border-radius: 56px; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 40px 120px rgba(0,0,0,.5); }
+.phone-head { display: flex; align-items: center; gap: 16px; padding: 28px 32px; background: var(--surface); font-size: var(--fs-small); }
+.avatar { width: 48px; height: 48px; border-radius: 50%; background: linear-gradient(135deg, var(--accent), var(--accent-2)); }
+.phone-body { flex: 1; display: flex; flex-direction: column; gap: 16px; padding: 28px; justify-content: flex-end; }
+.bubble { max-width: 86%; padding: 18px 22px; border-radius: 22px; font-size: var(--fs-small); line-height: 1.35; }
+.bubble-them { align-self: flex-start; background: var(--surface-2); border-bottom-left-radius: 6px; }
+.bubble-me { align-self: flex-end; background: color-mix(in srgb, var(--accent) 24%, var(--surface)); border-bottom-right-radius: 6px; }
+.bubble-typing { display: flex; gap: 6px; }
+.bubble-typing i { width: 10px; height: 10px; border-radius: 50%; background: var(--fg-dim); animation: dot 1s infinite; }
+.bubble-typing i:nth-child(2) { animation-delay: .15s; } .bubble-typing i:nth-child(3) { animation-delay: .3s; }
+@keyframes dot { 50% { transform: translateY(-6px); opacity: .5; } }
+
+/* =================== modo flow (celular em pé) =================== */
+.is-flow {
+  --fs-hero: clamp(40px, 11vw, 88px); --fs-h1: clamp(30px, 8vw, 60px); --fs-h2: clamp(26px, 6.5vw, 48px);
+  --fs-h3: clamp(19px, 4.6vw, 32px); --fs-body: clamp(16px, 4.2vw, 26px); --fs-small: clamp(14px, 3.4vw, 20px);
+  --fs-caption: clamp(13px, 3vw, 17px); --fs-code: clamp(12px, 3vw, 18px); --radius: 16px;
+}
+.is-flow .slide { padding-inline: max(16px, 5vw); }
+.is-flow .glow { width: 500px; height: 500px; right: -200px; top: -150px; }
+.is-flow .marquee { position: relative; bottom: auto; margin-top: 40px; }
+.is-flow .card { padding: 20px; }
+.is-flow .stats { grid-template-columns: 1fr; margin-top: 32px; gap: 14px; }
+.is-flow .stat-value { font-size: 48px; }
+.is-flow .term-window { margin-top: 24px; }
+.is-flow .term-body { padding: 16px; min-height: 260px; }
+.is-flow .flow { grid-template-columns: 1fr; gap: 14px; margin-top: 32px; }
+.is-flow .flow-lines, .is-flow .flow-packet { display: none; }
+.is-flow .flow-node { width: 100%; height: auto; padding: 18px; }
+.is-flow .steps-layout { grid-template-columns: 1fr; gap: 16px; margin-top: 24px; }
+.is-flow .step { padding: 14px 16px; }
+.is-flow .step-stage { min-height: 200px; }
+.is-flow .panel { inset: 20px; gap: 10px; }
+.is-flow .chat-layout { grid-template-columns: 1fr; gap: 24px; }
+.is-flow .phone { height: 480px; border-radius: 32px; }
+.is-flow .phone-body { padding: 16px; }
