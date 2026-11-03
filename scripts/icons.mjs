@@ -88,6 +88,10 @@ Sem logo disponível (aparecem só pelo nome ou com ícone genérico): AutoGPT, 
 
 [Lucide](https://lucide.dev) (\`lucide-static\`, licença ISC), embutidos no \`index.html\`: ${[...used].sort().join(', ')}.
 
+## Fotos
+
+- \`assets/img/rodrigo.jpg\`: foto do palestrante, arquivo pessoal (cópia reduzida de \`img/Rodrigo.jpg\`).
+
 Os ícones das três colunas do slide "onde usar" (editor, plugue, terminal) foram desenhados à mão no próprio
 \`index.html\`. A foto \`img/CLIs.jpg\` serviu só de referência de conteúdo e **não** entra no deck.
 `);

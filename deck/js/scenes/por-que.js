@@ -10,7 +10,6 @@ Deck.scene('por-que', function (el, api) {
   R.reveal(tl, now, { y: 30 });
   R.reveal(tl, now.querySelectorAll('.shift-steps li'), { y: 12, stagger: 0.15, duration: 0.4 });
   R.reveal(tl, el.querySelector('.shift-q'), { y: 16, at: '+=0.8' });
-  R.reveal(tl, el.querySelector('.qr'), { y: 0, scale: 0.9, duration: 0.5 });
   tl.addLabel('final');
   return { tl: tl };
 });

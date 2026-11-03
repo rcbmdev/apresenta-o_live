@@ -35,7 +35,11 @@ Sem logo disponível (aparecem só pelo nome ou com ícone genérico): AutoGPT, 
 
 ## Ícones de conceito
 
-[Lucide](https://lucide.dev) (`lucide-static`, licença ISC), embutidos no `index.html`: arrow-right, bot, brain, circle-check, code, database, eye, file-text, folder, folder-tree, git-branch, globe, hand, history, keyboard, layers, list-checks, map, message-square, monitor, pencil, play, puzzle, repeat, search, shield-check, square, target, terminal, users, wrench.
+[Lucide](https://lucide.dev) (`lucide-static`, licença ISC), embutidos no `index.html`: arrow-right, bot, brain, circle-check, code, database, eye, file-text, folder, folder-tree, git-branch, globe, graduation-cap, hand, history, keyboard, landmark, layers, list-checks, map, message-square, monitor, pencil, plane, play, puzzle, repeat, search, shield-check, square, target, terminal, users, wrench.
+
+## Fotos
+
+- `assets/img/rodrigo.jpg`: foto do palestrante, arquivo pessoal (cópia reduzida de `img/Rodrigo.jpg`).
 
 Os ícones das três colunas do slide "onde usar" (editor, plugue, terminal) foram desenhados à mão no próprio
 `index.html`. A foto `img/CLIs.jpg` serviu só de referência de conteúdo e **não** entra no deck.
