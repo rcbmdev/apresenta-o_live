@@ -32,8 +32,9 @@ Tema visual: padrão do kit (escuro, acento ciano). Logos em `deck/assets/img/lo
 | 13 | comecar | Começar leva três comandos | instalar, abrir no projeto, gerar o CLAUDE.md | terminal: install → `claude` → `/init` → arquivo CLAUDE.md aparecendo | 2:30 | comandos conferidos na doc |
 | 14 | comandos | Os comandos que você usa todo dia | poucos comandos resolvem 90% do uso | stepper com 4 abas: Sessão · Contexto · Controle · Retomar (detalhe abaixo) | 3:30 | conferir a lista na doc antes do evento |
 | 15 | contexto | Diga ao Claude o que ele não vê no código | CLAUDE.md curto, regras por pasta, skills e MCP | reveal em camadas (sempre carregado → por pasta → sob demanda → integrações) + terminal mostrando um CLAUDE.md enxuto | 3:00 | — |
+| 16 | praticar | Vamos praticar | transição para a parte prática com o Claude Code | splitChars no título + robô levantando peso em loop (rep 1→3) + terminal ilustrativo abrindo o Claude Code + roteiro da prática (5 passos) | 0:30 | "Interface ilustrativa" |
 
-**Total: 33:45** (15 slides; slides 3 "llms" e 10 "agentes" adicionados em 02/11/2026; slide 2 "sobre" adicionado em 02/11/2026; slides 13–15 — checagem, limites e workflow — removidos a pedido em 02/11/2026)
+**Total: 34:15** (16 slides; slide 16 "praticar" adicionado em 02/11/2026; slides 3 "llms" e 10 "agentes" adicionados em 02/11/2026; slide 2 "sobre" adicionado em 02/11/2026; slides 13–15 — checagem, limites e workflow — removidos a pedido em 02/11/2026)
 
 ---
 
@@ -162,6 +163,12 @@ Tema visual: padrão do kit (escuro, acento ciano). Logos em `deck/assets/img/lo
 
 
 
+### 16 · praticar — vamos praticar
+- título "Vamos praticar" + "Agora é com o Claude Code, ao vivo, num projeto de verdade."
+- robô levantando peso (SVG animado, contador "loop · rep 3")
+- terminal ilustrativo: `cd meu-projeto && claude` → boas-vindas → "explique a estrutura deste projeto"
+- roteiro da prática: Instalar → Abrir no projeto → /init → Primeira tarefa → Revisar o diff
+
 ---
 
 ## Notas do palestrante
@@ -201,6 +208,9 @@ Mensagem: o CLAUDE.md é lido em toda sessão, então cada linha custa atenção
 
 
 
+
+### 16 · praticar
+Mostre o roteiro da faixa de baixo e abra o terminal de verdade. Daqui em diante é demo ao vivo.
 
 ---
 

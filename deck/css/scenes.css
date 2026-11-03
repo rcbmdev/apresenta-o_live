@@ -417,6 +417,48 @@
 .layer b { display: inline-flex; align-items: center; gap: 12px; }
 .layer b .ic, .layer b .logo { width: 34px; height: 34px; }
 
+/* ---------- 16 · vamos praticar ---------- */
+.s-praticar .kicker { display: flex; align-items: center; gap: 12px; }
+.s-praticar .kicker .ic { width: 30px; height: 30px; }
+.pr-title { font-size: var(--fs-hero) !important; }
+.pr-lead { margin-top: 12px !important; font-size: var(--fs-h3); color: var(--fg-muted); }
+.pr-main { display: grid; grid-template-columns: 460px 1fr; gap: 56px; align-items: center; margin-top: 24px; }
+.robot { margin: 0; display: flex; flex-direction: column; align-items: center; gap: 4px; }
+.robot > svg { width: 400px; height: 438px; overflow: visible; }
+.robot figcaption { display: flex; align-items: center; gap: 10px; font-family: var(--font-mono); font-size: var(--fs-small); color: var(--fg-muted); }
+.robot figcaption .ic { width: 26px; height: 26px; }
+.rb-rep { color: var(--accent); }
+.rb-shadow { fill: var(--surface-2); }
+.rb-part { fill: var(--surface-2); stroke: var(--accent); stroke-width: 4; }
+.rb-dark { fill: var(--line); }
+.rb-face { fill: var(--term-bg); }
+.rb-eyes circle { fill: var(--accent); }
+.rb-eyes { transform-box: fill-box; transform-origin: center; }
+.rb-mouth { fill: none; stroke: var(--accent); stroke-width: 4; stroke-linecap: round; }
+.rb-core { fill: var(--accent); }
+.rb-antenna { stroke: var(--accent); stroke-width: 4; }
+.rb-sweat { fill: var(--accent-2); opacity: 0; }
+.rb-arm { stroke: var(--surface-2); stroke-width: 22; stroke-linecap: round; }
+.rb-bar { fill: var(--fg-muted); }
+.rb-plate { fill: var(--accent-2); }
+.rb-plate-2 { fill: color-mix(in srgb, var(--accent-2) 70%, var(--bg)); }
+.rb-hand { fill: var(--surface-2); stroke: var(--accent); stroke-width: 4; }
+.cc { margin-top: 0; }
+.cc-body { padding: 8px 0 20px; }
+.cc .term-body { min-height: 0; padding: 12px 36px; }
+.cc-welcome { display: flex; align-items: center; gap: 22px; margin: 6px 36px 10px; padding: 20px 24px; border: 2px solid color-mix(in srgb, var(--accent-5) 70%, var(--line)); border-radius: var(--radius-sm); }
+.cc-welcome .logo { width: 56px; height: 56px; }
+.cc-welcome div { display: flex; flex-direction: column; gap: 4px; }
+.cc-welcome b { font-size: var(--fs-h3); }
+.cc-welcome span { font-size: var(--fs-small); color: var(--fg-muted); }
+.cc-welcome .cc-cwd { font-family: var(--font-mono); font-size: var(--fs-caption); color: var(--fg-dim); }
+.cc-hint { margin: 4px 36px 0 !important; font-size: var(--fs-caption); color: var(--fg-dim); }
+.cc-hint kbd { font-size: var(--fs-caption); padding: 1px 8px; }
+.pr-steps { list-style: none; margin: 28px 0 0; padding: 0; display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; }
+.pr-steps li { display: flex; align-items: center; gap: 12px; padding: 14px 18px; background: var(--surface); border: 1px solid var(--line); border-radius: 999px; font-size: var(--fs-small); }
+.pr-steps .ic { width: 26px; height: 26px; }
+.pr-num { flex: none; display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; background: var(--accent); color: var(--on-accent); font-family: var(--font-mono); font-weight: 700; font-size: var(--fs-caption); }
+
 /* =================== modo flow (celular em pé) =================== */
 .is-flow {
   --fs-hero: clamp(40px, 11vw, 88px); --fs-h1: clamp(30px, 8vw, 60px); --fs-h2: clamp(26px, 6.5vw, 48px);
@@ -519,3 +561,11 @@
 .is-flow .s-agentes .term-body { padding: 12px; }
 .is-flow .s-agentes .term-line { white-space: normal; }
 .is-flow .llm-panel .models-note .ic, .is-flow .llm-panel .models-note .logo { width: 20px; height: 20px; }
+.is-flow .pr-main { grid-template-columns: 1fr; gap: 20px; margin-top: 20px; }
+.is-flow .robot > svg { width: 240px; height: 263px; }
+.is-flow .cc .term-body { padding: 10px 14px; min-height: 0; }
+.is-flow .cc-welcome { margin: 6px 14px; padding: 14px; gap: 12px; }
+.is-flow .cc-welcome .logo { width: 36px; height: 36px; }
+.is-flow .cc-hint { margin: 4px 14px 0 !important; }
+.is-flow .pr-steps { grid-template-columns: 1fr; gap: 10px; margin-top: 20px; }
+.is-flow .s-praticar .term-line { white-space: normal; }

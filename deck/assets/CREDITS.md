@@ -43,7 +43,7 @@ Sem logo disponível (aparecem só pelo nome ou com ícone genérico): AutoGPT, 
 
 ## Ícones de conceito
 
-[Lucide](https://lucide.dev) (`lucide-static`, licença ISC), embutidos no `index.html`: arrow-right, bot, brain, circle-check, cloud, code, database, eye, file-text, folder, folder-tree, git-branch, globe, graduation-cap, hand, history, keyboard, landmark, layers, list-checks, lock-open, map, message-square, monitor, pencil, plane, play, puzzle, repeat, rocket, search, shield-check, sparkles, square, target, terminal, users, wrench.
+[Lucide](https://lucide.dev) (`lucide-static`, licença ISC), embutidos no `index.html`: arrow-right, bot, brain, circle-check, cloud, code, database, download, dumbbell, eye, file-text, folder, folder-open, folder-tree, git-branch, globe, graduation-cap, hand, history, keyboard, landmark, layers, list-checks, lock-open, map, message-square, monitor, pencil, plane, play, puzzle, repeat, rocket, search, shield-check, sparkles, square, target, terminal, users, wrench.
 
 ## Fotos
 
