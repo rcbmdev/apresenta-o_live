@@ -24,6 +24,14 @@ jobs:
     steps:
       - uses: actions/checkout@v7
       - uses: actions/configure-pages@v6
+      # O Pages manda o navegador guardar CSS/JS por 10 min. Sem versão na URL, um navegador pode juntar o
+      # index.html novo com o CSS antigo (ex.: slide novo sem estilo). Cada deploy ganha ?v=<commit>.
+      # Só a cópia publicada muda: o deck/index.html do repositório continua abrindo offline via file://.
+      - name: Versionar CSS, JS e imagens
+        run: |
+          V=${GITHUB_SHA::8}
+          sed -i -E "s#(href|src)=\"((css|js|vendor|assets)/[^\"?]+)\"#\1=\"\2?v=$V\"#g" deck/index.html
+          grep -c "?v=$V" deck/index.html
       - uses: actions/upload-pages-artifact@v5
         with:
           path: deck
