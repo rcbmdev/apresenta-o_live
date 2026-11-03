@@ -15,7 +15,8 @@ const LIGHT = '#eef2fb'; // mesmo valor de --fg em tokens.css
 
 // ---------- logos ----------
 const LOGOS = ['python', 'langchain', 'langgraph', 'langflow', 'n8n', 'modelcontextprotocol', 'claude', 'anthropic',
-  'cursor', 'githubcopilot', 'googlegemini', 'opencode', 'pi', 'jetbrains', 'apple', 'homebrew'];
+  'cursor', 'githubcopilot', 'googlegemini', 'opencode', 'pi', 'jetbrains', 'apple', 'homebrew',
+  'meta', 'qwen', 'deepseek', 'mistralai', 'google', 'kimi', 'ollama', 'huggingface'];
 
 const luminance = hex => {
   const [r, g, b] = [0, 2, 4].map(i => parseInt(hex.slice(i, i + 2), 16) / 255)
@@ -82,7 +83,7 @@ ${credits.join('\n')}
 O logo da OpenAI (usado para ChatGPT e Codex CLI) saiu do simple-icons atual; a cópia vem do simple-icons v13
 e fica em \`scripts/brand/openai.svg\`.
 
-Sem logo disponível (aparecem só pelo nome ou com ícone genérico): AutoGPT, Kiro, Antigravity, Windows, VS Code.
+Sem logo disponível (aparecem só pelo nome ou com ícone genérico): AutoGPT, Kiro, Antigravity, Windows, VS Code, xAI/Grok.
 
 ## Ícones de conceito
 

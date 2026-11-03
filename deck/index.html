@@ -57,7 +57,62 @@
     <aside class="notes">Apresente-se em 30 segundos: programador, professor particular, quase 8 anos no IFMA e hoje mais de 75 mil alunos. Fale da busca pela liberdade geográfica. Mostre o QR code: quem quiser acompanha os slides no celular.</aside>
   </section>
 
-  <!-- 3 · POR QUE -->
+  <!-- 3 · LLMS -->
+  <section class="slide s-llms" data-id="llms" data-title="Os LLMs deram à IA o poder de criar">
+    <p class="kicker">FUNDAMENTOS</p>
+    <h2>Os LLMs deram à IA o poder de criar</h2>
+    <div class="llm">
+      <div class="llm-left">
+        <div class="llm-shift">
+          <p><span class="llm-tag">IA clássica</span>classifica e prevê: <b>“é spam?” → sim</b></p>
+          <p><span class="llm-tag is-gen">IA generativa</span>cria: <b>texto, código, imagem</b></p>
+        </div>
+        <article class="card token">
+          <p class="token-title"><i class="ic" data-icon="brain"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M12 18V5" /> <path d="M15 13a4.17 4.17 0 01-3-4 4.17 4.17 0 01-3 4" /> <path d="M17.707 6.294A3 3 0 1012 5a3 3 0 10-5.707 1.294" /> <path d="M17.996 5.125a4 4 0 012.526 5.77" /> <path d="M18 18a4 4 0 002-7.465" /> <path d="M19.967 17.482a4 4 0 11-7.967.517 4 4 0 11-7.967-.517" /> <path d="M6 18a4 4 0 01-2-7.465" /> <path d="M6.004 5.125a4 4 0 00-2.526 5.77" /> </svg></i>Um LLM gera um token por vez</p>
+          <p class="token-text"><span class="token-prompt">Escreva uma função que</span> <span class="tok">soma</span> <span class="tok">dois</span> <span class="tok">números</span></p>
+          <div class="token-cands" aria-label="Probabilidades do próximo token">
+            <ol class="cands"><li class="is-pick"><span>soma</span><span class="bar"><span class="fill" style="--p: 0.54"></span></span><b>54%</b></li><li><span>calcula</span><span class="bar"><span class="fill" style="--p: 0.23"></span></span><b>23%</b></li><li><span>retorna</span><span class="bar"><span class="fill" style="--p: 0.12"></span></span><b>12%</b></li></ol>
+            <ol class="cands"><li class="is-pick"><span>dois</span><span class="bar"><span class="fill" style="--p: 0.61"></span></span><b>61%</b></li><li><span>os</span><span class="bar"><span class="fill" style="--p: 0.18"></span></span><b>18%</b></li><li><span>três</span><span class="bar"><span class="fill" style="--p: 0.09"></span></span><b>9%</b></li></ol>
+            <ol class="cands"><li class="is-pick"><span>números</span><span class="bar"><span class="fill" style="--p: 0.72"></span></span><b>72%</b></li><li><span>valores</span><span class="bar"><span class="fill" style="--p: 0.15"></span></span><b>15%</b></li><li><span>inteiros</span><span class="bar"><span class="fill" style="--p: 0.08"></span></span><b>8%</b></li></ol>
+          </div>
+        </article>
+      </div>
+      <div class="llm-right">
+        <nav class="llm-tabs" aria-label="Tipos de modelo">
+          <button class="step"><i class="ic" data-icon="rocket"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5" /> <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09" /> <path d="M9 12a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.4 22.4 0 0 1-4 2z" /> <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 .05 5 .05" /> </svg></i>Fronteira</button>
+          <button class="step"><i class="ic" data-icon="lock-open"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <rect width="18" height="11" x="3" y="11" rx="2" ry="2" /> <path d="M7 11V7a5 5 0 0 1 9.9-1" /> </svg></i>Pesos abertos</button>
+        </nav>
+        <div class="llm-stage">
+          <div class="panel llm-panel" data-panel="0">
+            <h3>Fronteira</h3>
+            <ul class="models">
+              <li class="model"><img class="logo" src="assets/img/logos/claude.svg" alt=""><span><b>Claude</b><small>Anthropic</small></span></li>
+              <li class="model"><img class="logo" src="assets/img/logos/openai.svg" alt=""><span><b>GPT</b><small>OpenAI</small></span></li>
+              <li class="model"><img class="logo" src="assets/img/logos/googlegemini.svg" alt=""><span><b>Gemini</b><small>Google</small></span></li>
+              <li class="model"><i class="ic" data-icon="sparkles"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z" /> <path d="M20 2v4" /> <path d="M22 4h-4" /> <circle cx="4" cy="20" r="2" /> </svg></i><span><b>Grok</b><small>xAI</small></span></li>
+            </ul>
+            <p class="models-note"><i class="ic" data-icon="cloud"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z" /> </svg></i>Fechados: usados pelo app ou pela API, no servidor de quem os criou.</p>
+          </div>
+          <div class="panel llm-panel" data-panel="1">
+            <h3>Pesos abertos</h3>
+            <ul class="models">
+              <li class="model"><img class="logo" src="assets/img/logos/meta.svg" alt=""><span><b>Llama</b><small>Meta</small></span></li>
+              <li class="model"><img class="logo" src="assets/img/logos/qwen.svg" alt=""><span><b>Qwen</b><small>Alibaba</small></span></li>
+              <li class="model"><img class="logo" src="assets/img/logos/deepseek.svg" alt=""><span><b>DeepSeek</b><small>DeepSeek</small></span></li>
+              <li class="model"><img class="logo" src="assets/img/logos/mistralai.svg" alt=""><span><b>Mistral</b><small>Mistral AI</small></span></li>
+              <li class="model"><img class="logo" src="assets/img/logos/google.svg" alt=""><span><b>Gemma</b><small>Google</small></span></li>
+              <li class="model"><img class="logo" src="assets/img/logos/kimi.svg" alt=""><span><b>Kimi</b><small>Moonshot AI</small></span></li>
+            </ul>
+            <p class="models-note"><img class="logo" src="assets/img/logos/ollama.svg" alt="">Rode no seu computador com Ollama · <img class="logo" src="assets/img/logos/huggingface.svg" alt="">baixe no Hugging Face</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="footnote">Probabilidades ilustrativas. Famílias de modelos em novembro de 2026: as versões mudam a cada poucos meses, confira nos sites oficiais. Licenças de pesos abertos variam por modelo.</p>
+    <aside class="notes">Explique o salto: a IA clássica escolhe entre respostas prontas; o LLM gera, um token por vez, escolhendo o mais provável. Clique nas abas: modelos de fronteira (fechados, via API) e de pesos abertos (rodam na sua máquina). Diga que as versões mudam rápido; o que importa é a família.</aside>
+  </section>
+
+  <!-- 4 · POR QUE -->
   <section class="slide s-por-que" data-id="por-que" data-title="O desenvolvedor passou de autor a revisor">
     <p class="kicker">O QUE MUDOU</p>
     <h2>O desenvolvedor passou de autor a revisor</h2>
@@ -85,7 +140,7 @@
     <aside class="notes">Pergunte à plateia: "quem aqui já deixou um agente rodar um comando no seu terminal?". Use a resposta para calibrar o resto.</aside>
   </section>
 
-  <!-- 3 · 2022 -->
+  <!-- 5 · 2022 -->
   <section class="slide s-ano" data-id="t-2022" data-group="linha-do-tempo" data-title="2022: o chat chega ao cotidiano">
     <header class="tl-head">
       <span class="tl-year" data-year="2022">2022</span>
@@ -122,7 +177,7 @@
     <aside class="notes">Ritmo rápido, cerca de 2 minutos por ano. A ideia que atravessa os cinco slides: a cada ano, o modelo ganha mais ação e o desenvolvedor ganha mais responsabilidade de definir limites.</aside>
   </section>
 
-  <!-- 4 · 2023 -->
+  <!-- 6 · 2023 -->
   <section class="slide s-ano" data-id="t-2023" data-group="linha-do-tempo" data-title="2023: frameworks, fluxos e os primeiros agentes">
     <header class="tl-head">
       <span class="tl-year" data-year="2023" data-from="2022">2023</span>
@@ -164,7 +219,7 @@
     <aside class="notes">O salto de 2023: o modelo deixa de só responder e passa a escolher a próxima ação. Os agentes da época eram instáveis, mas a ideia ficou.</aside>
   </section>
 
-  <!-- 5 · 2024 -->
+  <!-- 7 · 2024 -->
   <section class="slide s-ano" data-id="t-2024" data-group="linha-do-tempo" data-title="2024: estado, ciclos e um protocolo para ferramentas">
     <header class="tl-head">
       <span class="tl-year" data-year="2024" data-from="2023">2024</span>
@@ -207,10 +262,10 @@
       </article>
     </div>
     <p class="footnote">O MCP padroniza a integração; as permissões continuam na implementação. Fontes: LangGraph (jan/2024); anúncio da Anthropic (25/11/2024) e modelcontextprotocol.io.</p>
-    <aside class="notes">Enfatize o MCP: ele volta no slide 13. Antes, cada integração era escrita à mão para cada aplicação; com o MCP, um servidor serve a qualquer cliente compatível.</aside>
+    <aside class="notes">Enfatize o MCP: ele volta no slide 15. Antes, cada integração era escrita à mão para cada aplicação; com o MCP, um servidor serve a qualquer cliente compatível.</aside>
   </section>
 
-  <!-- 6 · 2025 -->
+  <!-- 8 · 2025 -->
   <section class="slide s-ano" data-id="t-2025" data-group="linha-do-tempo" data-title="2025: a IA passa a trabalhar dentro do projeto">
     <header class="tl-head">
       <span class="tl-year" data-year="2025" data-from="2024">2025</span>
@@ -247,10 +302,10 @@
       </div>
     </div>
     <p class="footnote">Representação didática. A CLI conduz a execução; o modelo é uma escolha separada. Fontes: anúncios da Anthropic (fev, mai e out/2025) e da OpenAI (abr/2025).</p>
-    <aside class="notes">O agente lê o arquivo, propõe o diff, roda os testes e para para revisão. É isso que muda o papel do desenvolvedor do slide 3.</aside>
+    <aside class="notes">O agente lê o arquivo, propõe o diff, roda os testes e para para revisão. É isso que muda o papel do desenvolvedor do slide 4.</aside>
   </section>
 
-  <!-- 7 · 2026 -->
+  <!-- 9 · 2026 -->
   <section class="slide s-ano" data-id="t-2026" data-group="linha-do-tempo" data-title="2026: agentes que trabalham enquanto você revisa">
     <header class="tl-head">
       <span class="tl-year" data-year="2026" data-from="2025">2026</span>
@@ -284,7 +339,58 @@
     <aside class="notes">Feche a linha do tempo: o agente ficou mais autônomo, e por isso a revisão humana e as checagens automáticas ficaram mais importantes, não menos.</aside>
   </section>
 
-  <!-- 8 · ONDE USAR -->
+  <!-- 10 · AGENTES -->
+  <section class="slide s-agentes" data-id="agentes" data-title="O que faz de uma IA um agente">
+    <p class="kicker">AGENTES DE IA</p>
+    <h2>O que faz de uma IA um agente</h2>
+    <nav class="eq" aria-label="Partes de um agente">
+      <button class="step eq-part"><i class="ic" data-icon="brain"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M12 18V5" /> <path d="M15 13a4.17 4.17 0 01-3-4 4.17 4.17 0 01-3 4" /> <path d="M17.707 6.294A3 3 0 1012 5a3 3 0 10-5.707 1.294" /> <path d="M17.996 5.125a4 4 0 012.526 5.77" /> <path d="M18 18a4 4 0 002-7.465" /> <path d="M19.967 17.482a4 4 0 11-7.967.517 4 4 0 11-7.967-.517" /> <path d="M6 18a4 4 0 01-2-7.465" /> <path d="M6.004 5.125a4 4 0 00-2.526 5.77" /> </svg></i><b>LLM</b><span>o cérebro</span></button>
+      <span class="eq-op" aria-hidden="true">+</span>
+      <button class="step eq-part"><i class="ic" data-icon="repeat"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="m17 2 4 4-4 4" /> <path d="M3 11v-1a4 4 0 0 1 4-4h14" /> <path d="m7 22-4-4 4-4" /> <path d="M21 13v1a4 4 0 0 1-4 4H3" /> </svg></i><b>Loop</b><span>pensa, age, observa</span></button>
+      <span class="eq-op" aria-hidden="true">+</span>
+      <button class="step eq-part"><i class="ic" data-icon="wrench"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.106-3.105c.32-.322.863-.22.983.218a6 6 0 0 1-8.259 7.057l-7.91 7.91a1 1 0 0 1-2.999-3l7.91-7.91a6 6 0 0 1 7.057-8.259c.438.12.54.662.219.984z" /> </svg></i><b>Ferramentas</b><span>as mãos</span></button>
+      <span class="eq-op" aria-hidden="true">=</span>
+      <button class="step eq-part is-result"><i class="ic" data-icon="bot"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M12 8V4H8" /> <rect width="16" height="12" x="4" y="8" rx="2" /> <path d="M2 14h2" /> <path d="M20 14h2" /> <path d="M15 13v2" /> <path d="M9 13v2" /> </svg></i><b>Agente de IA</b><span>resolve o problema</span></button>
+    </nav>
+    <div class="agent-row">
+      <div class="agent-stage card">
+        <div class="panel agent-panel" data-panel="0">
+          <h3><i class="ic" data-icon="brain"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M12 18V5" /> <path d="M15 13a4.17 4.17 0 01-3-4 4.17 4.17 0 01-3 4" /> <path d="M17.707 6.294A3 3 0 1012 5a3 3 0 10-5.707 1.294" /> <path d="M17.996 5.125a4 4 0 012.526 5.77" /> <path d="M18 18a4 4 0 002-7.465" /> <path d="M19.967 17.482a4 4 0 11-7.967.517 4 4 0 11-7.967-.517" /> <path d="M6 18a4 4 0 01-2-7.465" /> <path d="M6.004 5.125a4 4 0 00-2.526 5.77" /> </svg></i>LLM · entende e decide</h3>
+          <p>Interpreta o objetivo e escolhe a próxima ação.</p>
+          <p class="agent-without">Sem LLM: um script fixo, que não sabe decidir.</p>
+        </div>
+        <div class="panel agent-panel" data-panel="1">
+          <h3><i class="ic" data-icon="repeat"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="m17 2 4 4-4 4" /> <path d="M3 11v-1a4 4 0 0 1 4-4h14" /> <path d="m7 22-4-4 4-4" /> <path d="M21 13v1a4 4 0 0 1-4 4H3" /> </svg></i>Loop · repete até concluir</h3>
+          <p>Pensa, age, observa o resultado e ajusta. Para quando o problema está resolvido.</p>
+          <p class="agent-without">Sem loop: uma resposta só, sem conferir nem corrigir.</p>
+        </div>
+        <div class="panel agent-panel" data-panel="2">
+          <h3><i class="ic" data-icon="wrench"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.106-3.105c.32-.322.863-.22.983.218a6 6 0 0 1-8.259 7.057l-7.91 7.91a1 1 0 0 1-2.999-3l7.91-7.91a6 6 0 0 1 7.057-8.259c.438.12.54.662.219.984z" /> </svg></i>Ferramentas · age no mundo</h3>
+          <p>Lê arquivos, roda comandos, busca na web, chama APIs e servidores MCP.</p>
+          <p class="agent-without">Sem ferramentas: só texto; nada acontece de fato.</p>
+        </div>
+        <div class="panel agent-panel" data-panel="3">
+          <h3><i class="ic" data-icon="bot"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M12 8V4H8" /> <rect width="16" height="12" x="4" y="8" rx="2" /> <path d="M2 14h2" /> <path d="M20 14h2" /> <path d="M15 13v2" /> <path d="M9 13v2" /> </svg></i>Definição</h3>
+          <p class="agent-def">Um agente de IA usa um <b>LLM</b> em <b>loop</b>, com <b>ferramentas</b>, para resolver um <b>problema específico</b>.</p>
+        </div>
+      </div>
+      <div class="term-window agent-trace">
+        <div class="term-bar"><i></i><i></i><i></i><span>agente · corrigir o login</span></div>
+        <div class="term-body">
+          <div class="term-line" data-t="dim">objetivo: o teste de login está falhando</div>
+          <div class="term-line" data-t="cmd">npm test</div>
+          <div class="term-line" data-t="err">✗ 1 failed: senha vazia é aceita</div>
+          <div class="term-line" data-t="dim">↻ pensa: validar a senha → Edit src/auth.ts</div>
+          <div class="term-line" data-t="cmd">npm test</div>
+          <div class="term-line" data-t="ok">✓ 12 passed · problema resolvido</div>
+        </div>
+      </div>
+    </div>
+    <p class="footnote">Definição didática. Execução do agente ilustrativa. Clique em cada parte da equação.</p>
+    <aside class="notes">Monte a equação com a plateia: clique em LLM, Loop e Ferramentas e diga o que acontece sem cada um. Termine na definição: um agente de IA usa um LLM em loop, com ferramentas, para resolver um problema específico. O terminal ao lado mostra exatamente isso: roda o teste, lê o erro, corrige, roda de novo e para.</aside>
+  </section>
+
+  <!-- 11 · ONDE USAR -->
   <section class="slide s-onde-usar" data-id="onde-usar" data-title="Três lugares para trabalhar com um agente de código">
     <p class="kicker">ONDE USAR</p>
     <h2>Três lugares para trabalhar com um agente de código</h2>
@@ -320,7 +426,7 @@
     <aside class="notes">Pergunte quem usa cada um dos três. Os conceitos da palestra (contexto, checagem e limites) valem para todos; daqui em diante, o exemplo é o Claude Code no terminal.</aside>
   </section>
 
-  <!-- 9 · LOOP -->
+  <!-- 12 · LOOP -->
   <section class="slide s-loop" data-id="loop" data-title="Como o Claude Code trabalha: um loop com ferramentas">
     <p class="kicker">MODELO MENTAL</p>
     <h2>Como o Claude Code trabalha: um loop com ferramentas</h2>
@@ -347,10 +453,10 @@
     </div>
     <p class="loop9-take">Você pode interromper a qualquer momento com <kbd>Esc</kbd>; o trabalho feito até ali fica.</p>
     <p class="footnote">Diagrama simplificado, baseado em "How Claude Code works" (code.claude.com/docs).</p>
-    <aside class="notes">Este é o modelo mental da palestra. Volte a ele no slide 13: o contexto alimenta "Reunir contexto".</aside>
+    <aside class="notes">Este é o modelo mental da palestra. Volte a ele no slide 15: o contexto alimenta "Reunir contexto".</aside>
   </section>
 
-  <!-- 10 · COMEÇAR -->
+  <!-- 13 · COMEÇAR -->
   <section class="slide s-comecar" data-id="comecar" data-title="Começar leva três comandos">
     <p class="kicker">PRIMEIROS PASSOS</p>
     <h2>Começar leva três comandos</h2>
@@ -384,7 +490,7 @@
     <aside class="notes">Se houver tempo e internet, faça a demo ao vivo do /init num repositório pequeno. Tenha o screenshot de backup.</aside>
   </section>
 
-  <!-- 11 · COMANDOS -->
+  <!-- 14 · COMANDOS -->
   <section class="slide s-comandos" data-id="comandos" data-title="Os comandos que você usa todo dia">
     <p class="kicker">DIA A DIA</p>
     <h2>Os comandos que você usa todo dia</h2>
@@ -438,7 +544,7 @@
     <aside class="notes">Não leia todos. Clique em cada aba e destaque um por aba: @arquivo, /clear, Esc Esc, claude -p.</aside>
   </section>
 
-  <!-- 12 · CONTEXTO -->
+  <!-- 15 · CONTEXTO -->
   <section class="slide s-contexto" data-id="contexto" data-title="Diga ao Claude o que ele não vê no código">
     <p class="kicker">CONTEXTO</p>
     <h2>Diga ao Claude o que ele não vê no código</h2>
@@ -474,7 +580,7 @@
 <div id="deck-options" hidden>
   <div class="deck-panel">
     <header><h2>Apresentação e materiais</h2><button class="deck-btn" data-action="close">Fechar</button></header>
-    <p><a href="downloads/deck.pdf?v=3">Baixar PDF</a> · <a href="downloads/deck.pptx?v=3">Baixar PowerPoint</a></p>
+    <p><a href="downloads/deck.pdf?v=4">Baixar PDF</a> · <a href="downloads/deck.pptx?v=4">Baixar PowerPoint</a></p>
   </div>
 </div>
 
@@ -484,8 +590,10 @@
 <!-- uma cena por arquivo, mesmo nome do data-id -->
 <script src="js/scenes/capa.js"></script>
 <script src="js/scenes/sobre.js"></script>
+<script src="js/scenes/llms.js"></script>
 <script src="js/scenes/por-que.js"></script>
 <script src="js/scenes/linha-do-tempo.js"></script>
+<script src="js/scenes/agentes.js"></script>
 <script src="js/scenes/onde-usar.js"></script>
 <script src="js/scenes/loop.js"></script>
 <script src="js/scenes/comecar.js"></script>
